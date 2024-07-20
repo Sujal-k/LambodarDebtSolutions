@@ -114,13 +114,19 @@ hr{
     justify-content: space-around;
 }
 @media (max-width: 768px) {
+    .text-over-img{
+        position: absolute;
+      top: 50%; 
+      left: 45%; 
+      width: 80%;
+      transform: translate(-50%, -50%);
+    }
     .section-mid{
         display: flex;
         flex-direction: column-reverse;
     }
-    .card-cont{
-        display: flex;
-        flex-direction: column;
+    .button-holder1{
+        width: 100%;
     }
     .button-holder2{
         justify-content: space-around;
@@ -128,5 +134,11 @@ hr{
     .text-over-img h4{
         border-left: 4px solid #FF772B;
         border-radius: 4px;
+    }
+    .text-over-img p,#btn-1,#btn-2,#btn-3,#btn-4,#btn-5,.section-mid-right-top p,.section-mid-right-bottom p{
+        font-size: 12px;
+    }
+    .section-top img{
+        width: 90vw;
     }
 } 
