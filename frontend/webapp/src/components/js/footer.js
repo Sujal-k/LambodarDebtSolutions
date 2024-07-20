@@ -15,11 +15,11 @@ export default function Footer() {
             <h4>Contact Us</h4>
             <br/>
             <div>
-              <img src={call} alt=' ' /><div> 919860485555 , 0240-2980505 Ganesh</div>
+              <img src={call} alt=' ' draggable="false" /><div> 919860485555 , 0240-2980505 Ganesh</div>
             </div>
             <br/>
             <div>
-              <img src={gmail} alt=' ' /><div> Ganesh.mansurkar@moryaassociates.com</div>
+              <img src={gmail} alt=' '  draggable="false"/><div> Ganesh.mansurkar@moryaassociates.com</div>
             </div>
             <br />
           </div>
@@ -28,7 +28,7 @@ export default function Footer() {
             <br/>
             <div>
               <ul>
-                <li><Link to='/home'>Home</Link></li>
+                <li><Link to='/'>Home</Link></li>
                 <li><Link to='/about'>About Us</Link></li>
                 <li><Link to='/services'>Services</Link></li>
                 <li><Link to='/career'>Careers</Link></li>
@@ -39,11 +39,11 @@ export default function Footer() {
             <h4>Our Locations</h4>
             <br/>
             <div>
-              <img src={loc} alt='' /><div><a href='w.com'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur </a></div>
+              <img src={loc} alt='' draggable="false"/><div><a href='w.com' > Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur </a></div>
             </div>
             <br/>
             <div>
-              <img src={loc} alt='' /><div><a href='w.com'> Lorem ipsum dolor sit amet consectetur adipisicing elit.t ing elit. Lorem ipsum dolor sit amet consectetur</a></div>
+              <img src={loc} alt='' draggable="false"/><div><a href='w.com' draggable="false"> Lorem ipsum dolor sit amet consectetur adipisicing elit.t ing elit. Lorem ipsum dolor sit amet consectetur</a></div>
             </div>
           </div>
         </div>

@@ -1,0 +1,5 @@
+.appFixedNavbar{
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+}

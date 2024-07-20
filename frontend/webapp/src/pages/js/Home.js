@@ -90,7 +90,7 @@ export default function Home() {
       <div className='home-main-custom'>
         <Container>
           <div className='home-hero-custom' style={containerStyle} data-aos="fade-up" data-aos-easing="cubic-bezier(0.68, -0.55, 0.27, 1.55)">
-            <img style={imageStyle} src={woman} alt='woman' className="img-fluid" />
+            <img style={imageStyle} src={woman} alt='woman' className="img-fluid" draggable="false"/>
             <div style={overlayStyle}>
               <div style={overlayContent} className='home-hero-overlay'>
                 <h1 style={{ fontSize: "4.1vw", fontWeight: "30px", fontFamily: "Poppins" }} data-aos='fade-left'>WE BRING GOOD FINANCIAL TO LIFE.</h1>
@@ -140,7 +140,7 @@ export default function Home() {
                   </div>
                 </Col>
                 <Col md={6} className='head-office-loc' data-aos='fade-right'>
-                  <img src={loc} alt='' className='img-fluid' />
+                  <img src={loc} alt='' className='img-fluid' draggable="false" />
                 </Col>
               </Row>
             </Container>

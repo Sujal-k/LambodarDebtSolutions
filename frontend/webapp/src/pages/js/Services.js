@@ -19,7 +19,8 @@ const Services = () => {
   return (
     <Container>
     <section>
-      <h3 id='page-heading' className="text-center">Services</h3>
+      {/* <h3 id='page-heading' className="text-center">Services</h3> */}
+      <br/>
       <div className='first-section'>
         <div className='first-section-left'>
           <h4 data-aos="fade-right" data-aos-once="true">Affordable services provided by us.</h4>
@@ -27,7 +28,7 @@ const Services = () => {
           <span id='btn' data-aos="fade-up" data-aos-once="true"><button >Explore</button></span>
         </div>
         <div className='first-section-right'>
-          <img src={img1} alt="online business" className='img-fluid' data-aos="fade-left"></img>
+          <img src={img1} alt="online business" className='img-fluid' data-aos="fade-left" draggable="false"></img>
         </div>
         
       </div>

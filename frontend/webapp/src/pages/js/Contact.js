@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button'; 
 import Modal from 'react-bootstrap/Modal';
+import Spinner from 'react-bootstrap/Spinner'; // Import Spinner component
 import axios from 'axios';
 import contactImage from '../../assets/contactUs.png'; 
 import callImage from '../../assets/Call_Contact.png';
@@ -19,6 +20,7 @@ function Contact() {
 
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState('');
+  const [loading, setLoading] = useState(false); // Add loading state
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,20 +32,22 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading to true when form is submitted
     try {
       const response = await axios.post('/contact', formData);
       if (response.status === 200) {
-        setPopupMessage('Contact details saved and email sent');
+        setPopupMessage('Your contact query is received');
         setShowPopup(true);
       } else {
-        setPopupMessage('Failed to send contact details');
+        setPopupMessage('Failed to send your query');
         setShowPopup(true);
       }
     } catch (err) {
       console.error('Error sending contact form data', err);
-      setPopupMessage('Error sending contact form data');
+      setPopupMessage('Error sending query');
       setShowPopup(true);
     }
+    setLoading(false); // Set loading to false once request is complete
   };
 
   const handlePopupClose = () => setShowPopup(false);
@@ -61,11 +65,11 @@ function Contact() {
           <div className="col-md-5">
             <div className="contact-info d-flex justify-content-md-end">
               <div className="contact-item">
-                <img src={callImage} alt="Call" />
+                <img src={callImage} alt="Call" draggable="false" />
                 <p style={{ marginBottom: '0' }}>9322944343 / 7058417001</p>
               </div>
               <div className="contact-item ml-md-4">
-                <img src={emailImage} alt="Email" />
+                <img src={emailImage} alt="Email"  draggable="false"/>
                 <p style={{ marginBottom: '0' }}>lambodardebtsolution@gmail.com</p>
               </div>
             </div>
@@ -79,7 +83,6 @@ function Contact() {
           backgroundImage: `url(${contactImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          // minWidth: '97vw', 
           width:"100%",
           height:"auto",
           display: 'flex',
@@ -102,7 +105,7 @@ function Contact() {
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Control
-                type="text"
+                type="tel"
                 placeholder="Phone Number"
                 name="mobile"
                 value={formData.mobile}
@@ -131,8 +134,8 @@ function Contact() {
                 required
               />
             </Form.Group>
-            <Button variant="primary" type="submit">
-              Submit
+            <Button variant="primary" type="submit" disabled={loading}>
+              {loading ? <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" /> : 'Submit'}
             </Button>
           </Form>
         </div>

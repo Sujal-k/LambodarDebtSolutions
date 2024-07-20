@@ -8,7 +8,7 @@ function ExampleCarouselImage({ text }) {
     }
   return (
     <div className="carousel-image">
-      <img src={sbi} alt={text} style={ImageStyle} />
+      <img src={sbi} alt={text} style={ImageStyle} draggable="false" />
     </div>
   );
 }

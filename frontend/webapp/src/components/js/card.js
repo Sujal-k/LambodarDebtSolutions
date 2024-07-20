@@ -34,7 +34,7 @@ const cardTextStyle = {
               <Card.Text style={cardTextStyle}>{text}</Card.Text>
             </div>
             <div style={{ flex: '1', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <Image src={image} style={{ width: '100%', height: 'auto', maxWidth: '210px' }} />
+              <Image src={image} style={{ width: '100%', height: 'auto', maxWidth: '210px' ,}} draggable="false" />
             </div>
           </Card.Body>
         </Card>

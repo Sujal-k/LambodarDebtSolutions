@@ -6,9 +6,6 @@ import Cardcount from '../../components/js/count-card';
 import '../css/about.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-const abstyle = {
-    textAlign:'center'
-};
 
 
 export default function About() {
@@ -22,9 +19,9 @@ export default function About() {
   return (
     <>
     <div className='cont'>
-    <h3 id='page-heading' style={abstyle}>About Us</h3>
+    <br/>
     <div className='section-top'>
-      <img src={abimg1} alt='#' data-aos="fade-up"></img>
+      <img src={abimg1} alt='#' data-aos="fade-up" draggable="false"></img>
       <div className='text-over-img'>
         <h4 data-aos="fade-right"  data-aos-once="true">What is Carlio And<br></br>How it is valid?</h4>
         <p data-aos="fade-left"  data-aos-once="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer.</p>
@@ -36,7 +33,7 @@ export default function About() {
     </div>
     <div className='section-mid'>
         <div className='section-mid-left'>
-          <img src={abimg2} alt='#' data-aos="fade-left"  data-aos-once="false"></img>
+          <img src={abimg2} alt='#' data-aos="fade-left"  data-aos-once="false" draggable="false"></img>
         </div>
         <div className='section-mid-right'>
           <div className='section-mid-right-top'>
