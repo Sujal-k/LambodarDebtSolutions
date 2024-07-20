@@ -47,5 +47,6 @@
 
     .navbar-toggler:focus{
       border: none;
+      box-shadow: none;
     }
   }
