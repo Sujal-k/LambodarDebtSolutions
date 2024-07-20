@@ -63,7 +63,7 @@ app.post('/contact', async (req, res) => {
             from: process.env.EMAIL_USER,
             to: process.env.EMAIL_RECIVER, // Replace with recipient email address
             subject: 'New Contact Form Submission',
-            text: `You have a new contact form submission:\n\nName: ${data.name}\nPhone: ${data.phone}\nEmail: ${data.email}\nMessage: ${data.message}`
+            text: `You have a new contact form submission:\n\nName: ${data.name}\nPhone: ${data.mobile}\nEmail: ${data.email}\nMessage: ${data.message}`
         };
 
         await transporter.sendMail(mailOptions);
