@@ -89,8 +89,8 @@
     justify-content: space-between;
 }
 #btn-3,#btn-4,#btn-5{
-    width: 11vw;
-    padding: 1vw 4px;
+    width: auto;
+    padding: 1vw 14px;
     border: none;
     border-radius: 5px;
     font-size: 1.3vw;
