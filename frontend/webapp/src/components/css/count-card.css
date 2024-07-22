@@ -27,4 +27,13 @@ padding: 10px 0;
     .c-card-body{
         padding: 10px;
     }
+    #c-inf{
+        font-size: 12px;
+    }
+    .c-card-body h4{
+        font-size: 14px;
+    }
+    #count{
+        font-size: 25px;
+    }
 }
