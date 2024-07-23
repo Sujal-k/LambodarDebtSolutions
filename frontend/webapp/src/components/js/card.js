@@ -1,7 +1,7 @@
   import React from 'react';
   import Card from 'react-bootstrap/Card';
   import Image from 'react-bootstrap/Image';
-  import JobImage from '../../assets/Mangetsajob.png';
+  // import JobImage from '../../assets/Mangetsajob.png';
 
   const cardTitleStyle = {
     fontFamily: 'Poppins, sans-serif',
@@ -19,11 +19,11 @@ const cardTextStyle = {
   lineHeight: '24px',
 };
 
-  const CustomCard = () => {
+  const CustomCard = (props) => {
     // Define job data directly within the component
-    const title = "Software Engineer";
-    const text = "Join our team as a software engineer and work on exciting projects!";
-    const image = JobImage; // Assuming JobImage is imported correctly from '../../assets/Mangetsajob.png'
+    const title = props.title;
+    const text = props.text;
+    const image = props.img; // Assuming JobImage is imported correctly from '../../assets/Mangetsajob.png'
 
     return (
       <div className="col-md-6 col-lg-4 mb-4">

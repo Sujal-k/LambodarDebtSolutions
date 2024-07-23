@@ -156,8 +156,8 @@ function Contact() {
       </Modal>
       <h3 id='lower-head'>Our Locations</h3>
       <div className='loc-cont'>     
-          <LCard title="location1" info="this is our new location" mobno="1234567890" />
-          <LCard title="location1" info="this is our new location" mobno="1234567890" />
+          <LCard title="location1" info="this is our new location dh dskacj ndkBCJD  NDSKNND DSCSX DNKLN DSJN" mobno="1234567890" />
+          <LCard title="Head Office" info="OFFICE NO.4 ,NEAR MORYA MEDICAL,N-6 CIDCO, CHHATRAPATI SAMBHAJI NAGAR (AURANGABAD) 431001" mobno="9322944343 / 7058417001" />
           <LCard title="location1" info="this is our new location" mobno="1234567890" />
       </div>
     </section>

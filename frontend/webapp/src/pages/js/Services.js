@@ -25,7 +25,7 @@ const Services = () => {
         <div className='first-section-left'>
           <h4 data-aos="fade-right" data-aos-once="true">Affordable services provided by us.</h4>
           <p data-aos="fade-left" data-aos-once="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer.</p>
-          <span id='btn' data-aos="fade-up" data-aos-once="true"><button >Explore</button></span>
+          <span id='btn' data-aos="fade-up" data-aos-once="true"><a href='#cards-container'><button >Explore</button></a></span>
         </div>
         <div className='first-section-right'>
           <img src={img1} alt="online business" className='img-fluid' data-aos="fade-left" draggable="false"></img>
@@ -42,9 +42,9 @@ const Services = () => {
 
       {/* Cards Section */}
       <Container>
-      <div className="cards-container">
+      <div className="cards-container" id='cards-container'>
         <div className="cards-row" data-aos="fade-up" data-aos-once="true">
-          <Cards />
+          <Cards title="●	Two-Wheeler Loan Recovery" text="We specialize in recovering two-wheeler loans, ensuring a smooth process to help you regain financial stability and secure your valuable assets." img={img1} />
           <Cards />
         </div>
         <div className="cards-row" data-aos="fade-up" data-aos-once="true">
