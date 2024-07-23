@@ -15,11 +15,11 @@ export default function Footer() {
             <h4>Contact Us</h4>
             <br/>
             <div>
-              <img src={call} alt=' ' draggable="false" /><div> 919860485555 , 0240-2980505 Ganesh</div>
+              <img src={call} alt=' ' draggable="false" /><div> 9322944343 / 7058417001</div>
             </div>
             <br/>
             <div>
-              <img src={gmail} alt=' '  draggable="false"/><div> Ganesh.mansurkar@moryaassociates.com</div>
+              <img src={gmail} alt=' '  draggable="false"/><div> Ganesh.lambodardebtsolution@gmail.com</div>
             </div>
             <br />
           </div>
@@ -39,11 +39,11 @@ export default function Footer() {
             <h4>Our Locations</h4>
             <br/>
             <div>
-              <img src={loc} alt='' draggable="false"/><div><a href='w.com' > Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur </a></div>
+              <img src={loc} alt='' draggable="false"/><div><a href='w.com' > OFFICE NO.4 ,NEAR MORYA MEDICAL,N-6 CIDCO, CHHATRAPATI SAMBHAJI NAGAR (AURANGABAD) 431001 </a></div>
             </div>
             <br/>
             <div>
-              <img src={loc} alt='' draggable="false"/><div><a href='w.com' draggable="false"> Lorem ipsum dolor sit amet consectetur adipisicing elit.t ing elit. Lorem ipsum dolor sit amet consectetur</a></div>
+              <img src={loc} alt='' draggable="false"/><div><a href='w.com' draggable="false"> BLOCK NO.14/125 , SUKHSHANTI NAGAR ,JALNA 431203</a></div>
             </div>
           </div>
         </div>
