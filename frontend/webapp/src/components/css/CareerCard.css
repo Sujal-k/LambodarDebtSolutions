@@ -4,11 +4,33 @@
     flex-direction: column;
     padding: 20px;
     width: 90%;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    border: none;
+    border-radius: 8px;
+    margin: 10px 0;
+    background-color: #F4F6FA;
 }
 .career-card-content{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    /* align-items:center; */
+    padding: 5px;
+}
+.career-card-content-left,.career-card-content-right{
+    width: 45%;
+    color: #333333CC;
+}
+@media (max-width:786px) {
+    .career-card-content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items:center;
+        padding: 5px;
+    }
+    .career-card-content-left,.career-card-content-right{
+        width: 85%;
+    }
 }

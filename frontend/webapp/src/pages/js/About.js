@@ -39,10 +39,6 @@ export default function About() {
           <div className='section-mid-right-top'>
             <h3 data-aos="fade-up" >Our Company Overview</h3>
             <p data-aos="fade-right"  data-aos-once="true">At Lambodar Debt Solutions, we are dedicated to helping individuals achieve financial stability and freedom. Our mission is to provide effective debt relief through personalized plans tailored to each client's unique situation. With a focus on transparency, integrity, and exceptional customer service, we guide our clients through the complexities of debt management, offering solutions that bring financial peace of mind. </p>
-            <div className='button-holder2'>
-              <button id='btn-3' data-aos="fade-left">Company</button>
-              <button id='btn-4' data-aos="fade-left">Our Team</button>
-            </div>
           </div>
           <hr/>
           <div className='section-mid-right-bottom'>

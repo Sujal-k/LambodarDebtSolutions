@@ -70,15 +70,43 @@ const StyledDiv = () => {
 
   const handlePopupClose = () => setShowPopup(false);
   
-    const respo = [
-        "Lead the team to success.",
-        "Develop project plans.",
-        "Monitor team performance."
+    const respo1 = [
+        "Handle customer inquiries and provide accurate information.",
+        "Handle customer inquiries and provide accurate information.",
+        "Utilize advanced MS-Excel skills for managing and analyzing data.",
+        "Supervise and lead a team of telecallers to meet and exceed targets.",
+        "Manage and organize customer data to ensure accurate and efficient operations."
     ];
-    const reqs = [
+    const reqs1 = [
         "Strong communication and interpersonal skills.",
         "Proficiency in MS-Excel, including advanced functions.",
-        "Proven experience in team management."
+        "Proven experience in team management.",
+        "Excellent organizational skills and attention to detail."
+    ];
+    const respo2 = [
+        "Interact with customers to address their needs and resolve issues.",
+        "Conduct door-to-door visits for service provision and customer engagement.",
+        "Implement recovery strategies to retrieve overdue payments.",
+        "Collect payments and manage collections effectively.",
+        "Oversee repossession processes, handling assets with professionalism."
+    ];
+    const reqs2 = [
+        "Excellent customer service and communication skills.",
+        "Ability to handle door-to-door visits and manage collections.",
+        "Experience in recovery and repossession activities.",
+        "Strong organizational and problem-solving skills."
+    ];
+    const respo3 = [
+        "Perform advanced Excel functions for comprehensive data analysis and reporting.",
+        "Merge data from various sources to create accurate and detailed reports.",
+        "Generate timely reports to keep management updated on performance metrics.",
+        "Maintain data integrity and ensure efficient data management."
+    ];
+    const reqs3 = [
+        "Advanced proficiency in MS-Excel, including complex formulas and data manipulation.",
+        "Experience with data merging and reporting.",
+        "Strong attention to detail and organizational skills.",
+        "Ability to manage and prioritize multiple tasks effectively."
     ];
   return (
     <Container>
@@ -101,9 +129,9 @@ const StyledDiv = () => {
         </div>
 
         <div className="cards-container">
-        <CareerCard title="Telecaller" respo={respo} reqs={reqs} />
-        <CareerCard title="Field Executive" respo={respo} reqs={reqs} />
-        <CareerCard title="Back Office Executive" respo={respo} reqs={reqs} />
+        <CareerCard title="Telecaller" respo={respo1} reqs={reqs1} />
+        <CareerCard title="Field Executive" respo={respo2} reqs={reqs2} />
+        <CareerCard title="Back Office Executive" respo={respo3} reqs={reqs3} />
         </div>
 
         <Modal show={showForm} onHide={handleClose}>
