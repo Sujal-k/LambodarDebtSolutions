@@ -156,7 +156,7 @@ function Contact() {
       </Modal>
       <h3 id='lower-head'>Our Locations</h3>
       <div className='loc-cont'>     
-          <LCard title="location1" info="this is our new location" mobno="1234567890" />
+          <LCard title="location1" info="CSN HEAD OFFICE" mobno="9322944343" />
           <LCard title="location1" info="this is our new location" mobno="1234567890" />
           <LCard title="location1" info="this is our new location" mobno="1234567890" />
       </div>
