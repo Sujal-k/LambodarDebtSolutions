@@ -69,7 +69,17 @@ const StyledDiv = () => {
   };
 
   const handlePopupClose = () => setShowPopup(false);
-
+  
+    const respo = [
+        "Lead the team to success.",
+        "Develop project plans.",
+        "Monitor team performance."
+    ];
+    const reqs = [
+        "Strong communication and interpersonal skills.",
+        "Proficiency in MS-Excel, including advanced functions.",
+        "Proven experience in team management."
+    ];
   return (
     <Container>
       <section>
@@ -91,9 +101,9 @@ const StyledDiv = () => {
         </div>
 
         <div className="cards-container">
-          <CareerCard title="Telecaller" respo="this guy has many responsibilities" req="the requirements exceed your expectations" />
-          <CareerCard/>
-          <CareerCard/>
+        <CareerCard title="Telecaller" respo={respo} reqs={reqs} />
+        <CareerCard title="Field Executive" respo={respo} reqs={reqs} />
+        <CareerCard title="Back Office Executive" respo={respo} reqs={reqs} />
         </div>
 
         <Modal show={showForm} onHide={handleClose}>
