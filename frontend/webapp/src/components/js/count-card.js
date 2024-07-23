@@ -12,7 +12,7 @@ function CardCount(props) {
         });
       }, []);
     return(
-        <div className="c-card-body" data-aos="fade-right" data-aos-delay={props.aosDelay}>
+        <div className="c-card-body" data-aos="fade-right" data-aos-delay={props.aosDelay} style={{textAlign:"center"}}>
             <p id="counts">{props.count}</p>
             <h4>{props.title}</h4>
             <p id="c-inf">{props.info}</p>
