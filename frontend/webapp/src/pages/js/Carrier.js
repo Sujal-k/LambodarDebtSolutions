@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../css/carrier.css';
 import interviewImage from '../../assets/OnlineInterview.png';
-import Cards from '../../components/js/Card';
+import CareerCard from '../../components/js/CareerCard';
 import AOS from 'aos';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -91,18 +91,9 @@ const StyledDiv = () => {
         </div>
 
         <div className="cards-container">
-          <div className="cards-row" data-aos="fade-up" data-aos-once="true">
-            <Cards />
-            <Cards />
-          </div>
-          <div className="cards-row" data-aos="fade-up" data-aos-once="true">
-            <Cards />
-            <Cards />
-          </div>
-          <div className="cards-row" data-aos="fade-up" data-aos-once="true">
-            <Cards />
-            <Cards />
-          </div>
+          <CareerCard title="Telecaller" respo="this guy has many responsibilities" req="the requirements exceed your expectations" />
+          <CareerCard/>
+          <CareerCard/>
         </div>
 
         <Modal show={showForm} onHide={handleClose}>

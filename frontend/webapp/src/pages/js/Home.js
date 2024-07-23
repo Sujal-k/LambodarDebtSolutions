@@ -129,14 +129,14 @@ export default function Home() {
                   <div>
                     <h4>Address</h4>
                     <br />
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium commodi</p>
+                    <p>OFFICE NO.4 ,NEAR MORYA MEDICAL,N-6 CIDCO, CHHATRAPATI SAMBHAJI NAGAR (AURANGABAD) 431001</p>
                   </div>
                   <div>
-                    <p>Mobile : 1234556</p>
-                    <p>Mobile : 1234556</p>
+                    <p>Mobile : 9322944343</p>
+                    <p>Mobile : 7058417001</p>
                   </div>
                   <div>
-                    <p>Email : Lambodar@debts</p>
+                    <p>Email : lambodardebtsolution@gmail.com</p>
                   </div>
                 </Col>
                 <Col md={6} className='head-office-loc' data-aos='fade-right'>
