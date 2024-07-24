@@ -14,17 +14,16 @@ import img4 from "../../assets/slide4.png";
 import img5 from "../../assets/slide5.png";
 import img6 from "../../assets/slide6.png";
 
-const sliderClick = (event) => {
-};
 
 const slides = [
-  { image: img1, title: "NPA LOAN RECOVERY", description: "", clickEvent: sliderClick, style: { width: '100%', height: 'auto' } },
-  { image: img2, title: "PERSONAL LOAN RECOVERY", description: "", clickEvent: sliderClick, style: { width: '100%', height: 'auto' } },
-  { image: img3, title: "B2B LOAN RECOVERY", description: "", clickEvent: sliderClick, style: { width: '100%', height: 'auto' } },
-  { image: img4, title: "CREDIT CARD LOAN RECOVERY", description: "", clickEvent: sliderClick, style: { width: '100%', height: 'auto' } },
-  { image: img5, title: "REPOSSION RECOVERY", description: "", clickEvent: sliderClick, style: { width: '100%', height: 'auto' } },
-  { image: img6, title: "HOME LOAN RECOVERY", description: "", clickEvent: sliderClick, style: { width: '100%', height: 'auto' } }
+  { image: img1, title: "NPA LOAN RECOVERY", description: "", style: { width: '100%', height: 'auto' } },
+  { image: img2, title: "PERSONAL LOAN RECOVERY", description: "", style: { width: '100%', height: 'auto' } },
+  { image: img3, title: "B2B LOAN RECOVERY", description: "", style: { width: '100%', height: 'auto' } },
+  { image: img4, title: "CREDIT CARD LOAN RECOVERY", description: "", style: { width: '100%', height: 'auto' } },
+  { image: img5, title: "REPOSSION RECOVERY", description: "", style: { width: '100%', height: 'auto' } },
+  { image: img6, title: "HOME LOAN RECOVERY", description: "", style: { width: '100%', height: 'auto' } }
 ];
+
 
 
 export default function Home() {
