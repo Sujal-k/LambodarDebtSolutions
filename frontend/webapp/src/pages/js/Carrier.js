@@ -10,7 +10,7 @@ import Spinner from 'react-bootstrap/Spinner'; // Import Spinner component
 import axios from 'axios';
 import { Container } from 'react-bootstrap';
 
-const jobRoles = ['Back Office Operation', 'Telecalling', 'Field Executive', 'Analyst', 'Administrator'];
+const jobRoles = ['Back Office Operation', 'Telecalling', 'Field Executive'];
 
 const StyledDiv = () => {
   const [showForm, setShowForm] = useState(false);
