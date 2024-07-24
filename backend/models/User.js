@@ -7,7 +7,7 @@ const UserSchema = new mongoose.Schema({
     },
     jobRole:{
         type:String,
-        enum: ['Back Office Operation', 'Telecalling', 'Field Executive', 'Analyst', 'Administrator'],//will set later
+        enum: ['Back Office Executive', 'Telecaller', 'Field Executive'],//Yet to reflect on frontend
         required:true
     },
     mobile:{

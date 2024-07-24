@@ -1,19 +1,27 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const db = require('./db')
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
 // Models
-const {User} = require('./models/User');
+const { User } = require('./models/User');
 const Contact = require('./models/Contact');
 
 // Middleware
 app.use(bodyParser.json());
+app.use(cors({
+    origin: 'https://debttesting.netlify.app', // Allow requests from this origin
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+}));
+
+app.options('*', cors()); // Handle preflight requests
 
 const PORT = process.env.PORT || 3000;
-
 
 // Setup Nodemailer transporter
 const transporter = nodemailer.createTransport({
@@ -34,10 +42,9 @@ app.post('/career', async (req, res) => {
         if (!response) {
             return res.status(500).send({ error: 'Cannot save the data' });
         } else {
-            // Send email notification
             const mailOptions = {
                 from: process.env.EMAIL_USER,
-                to: process.env.EMAIL_RECIVER, // Replace with recipient email address
+                to: process.env.EMAIL_RECIVER,
                 subject: 'New Career Application Received',
                 text: `You have a new career application:\n\nName: ${data.name}\nEmail: ${data.email}\nJob Role: ${data.jobRole}\nMobile: ${data.mobile}`
             };
@@ -51,19 +58,23 @@ app.post('/career', async (req, res) => {
     }
 });
 
-// Endpoint to handle contact form submissions
+// Endpoint to handle contact form submissionss
 app.post('/contact', async (req, res) => {
     try {
-        const data = req.body;
-        const newRequest = new Contact(data);
-        await newRequest.save();
+        const { name, mobile, email, message } = req.body;
+        
+        if (!name || !mobile || !email || !message) {
+            return res.status(400).json({ message: 'All fields are required.' });
+        }
 
-        // Send email notification
+        const newContact = new Contact({ name, mobile, email, message });
+        await newContact.save();
+
         const mailOptions = {
             from: process.env.EMAIL_USER,
-            to: process.env.EMAIL_RECIVER, // Replace with recipient email address
+            to: process.env.EMAIL_RECIVER,
             subject: 'New Contact Form Submission',
-            text: `You have a new contact form submission:\n\nName: ${data.name}\nPhone: ${data.mobile}\nEmail: ${data.email}\nMessage: ${data.message}`
+            text: `Name: ${name}\nPhone: ${mobile}\nEmail: ${email}\nMessage: ${message}`
         };
 
         await transporter.sendMail(mailOptions);
@@ -74,6 +85,7 @@ app.post('/contact', async (req, res) => {
         res.status(500).json({ message: 'Internal server error' });
     }
 });
+
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
