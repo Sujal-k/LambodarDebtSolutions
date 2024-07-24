@@ -83,21 +83,13 @@
     color: #666C89;
     padding: 10px 0;
 }
-.button-holder2{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-#btn-3,#btn-4,#btn-5{
+#btn-5{
     width: auto;
     padding: 1vw 14px;
     border: none;
     border-radius: 5px;
     font-size: 1.3vw;
     font-weight: 400;
-}
-#btn-3{
-    background-color: #FF772B;
 }
 hr{
     color: #666C89;
@@ -128,14 +120,11 @@ hr{
     .button-holder1{
         width: 100%;
     }
-    .button-holder2{
-        justify-content: space-around;
-    }
     .text-over-img h4{
         border-left: 4px solid #FF772B;
         border-radius: 4px;
     }
-    .text-over-img p,#btn-1,#btn-2,#btn-3,#btn-4,#btn-5,.section-mid-right-top p,.section-mid-right-bottom p{
+    .text-over-img p,#btn-1,#btn-2,#btn-5,.section-mid-right-top p,.section-mid-right-bottom p{
         font-size: 12px;
     }
     .section-top img{

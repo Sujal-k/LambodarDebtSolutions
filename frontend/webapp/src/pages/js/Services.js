@@ -59,7 +59,7 @@ const Services = () => {
           <div className='first-section-left'>
             <h4 data-aos="fade-right" data-aos-once="true">Affordable services provided by us.</h4>
             <p data-aos="fade-left" data-aos-once="true">Our legal advisory services offer expert debt recovery and financial management guidance, helping you confidently navigate legal complexities.</p>
-            <span id='btn' data-aos="fade-up" data-aos-once="true"><button>Explore</button></span>
+            <a href='#cards-container'><span id='btn' data-aos="fade-up" data-aos-once="true"><button>Explore</button></span></a>
           </div>
           <div className='first-section-right'>
             <img src={mainImage} alt="online business" className='img-fluid' data-aos="fade-left" draggable="false"></img>
@@ -75,7 +75,7 @@ const Services = () => {
 
         {/* Cards Section */}
         <Container>
-          <div className="cards-container">
+          <div className="cards-container" id='cards-container'>
             {renderCards()}
           </div>
         </Container>
