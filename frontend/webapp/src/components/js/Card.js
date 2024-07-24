@@ -1,15 +1,15 @@
-  import React from 'react';
-  import Card from 'react-bootstrap/Card';
-  import Image from 'react-bootstrap/Image';
-  
-  const cardTitleStyle = {
-    fontFamily: 'Poppins, sans-serif',
-    fontWeight: 700,
-    fontSize: '24px',
-    lineHeight: '36px',
-    marginBottom: '10px',
-    width: '100%', 
-  };
+import React from 'react';
+import Card from 'react-bootstrap/Card';
+import Image from 'react-bootstrap/Image';
+
+const cardTitleStyle = {
+  fontFamily: 'Poppins, sans-serif',
+  fontWeight: 700,
+  fontSize: '24px',
+  lineHeight: '36px',
+  marginBottom: '10px',
+  width: '100%',
+};
 
 const cardTextStyle = {
   fontFamily: 'Poppins, sans-serif',
