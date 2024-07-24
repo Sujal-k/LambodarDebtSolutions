@@ -35,6 +35,10 @@
     background-color: white; /* Change background color of the toggler icon */
   }
 
+  .navbar-toggler:focus{
+    box-shadow: none;
+  }
+
   @media (max-width: 784px) {
     .navbar-nav{
       font-size: 15px;

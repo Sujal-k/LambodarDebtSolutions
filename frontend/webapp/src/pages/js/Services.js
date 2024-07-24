@@ -59,7 +59,7 @@ const Services = () => {
           <div className='first-section-left'>
             <h4 data-aos="fade-right" data-aos-once="true">Affordable services provided by us.</h4>
             <p data-aos="fade-left" data-aos-once="true">Our legal advisory services offer expert debt recovery and financial management guidance, helping you confidently navigate legal complexities.</p>
-            <span id='btn' data-aos="fade-up" data-aos-once="true"><button>Explore</button></span>
+            <a href='#cards-container'><span id='btn' data-aos="fade-up" data-aos-once="true"><button>Explore</button></span></a>
           </div>
           <div className='first-section-right'>
             <img src={mainImage} alt="online business" className='img-fluid' data-aos="fade-left" draggable="false"></img>
@@ -69,13 +69,13 @@ const Services = () => {
         <div className='second-section-carrier-page' data-aos="fade-down" data-aos-once="true">
           <h3>Services for us</h3>
           <div className='info-para-carrier'>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer.</p>
+            <p>Our services are designed to exceed your expectations, ensuring seamless experiences that convince customers of our unparalleled quality and commitment.</p>
           </div>
         </div>
 
         {/* Cards Section */}
         <Container>
-          <div className="cards-container">
+          <div className="cards-container" id='cards-container'>
             {renderCards()}
           </div>
         </Container>

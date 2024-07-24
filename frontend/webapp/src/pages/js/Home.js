@@ -94,9 +94,9 @@ export default function Home() {
               <div style={overlayContent} className='home-hero-overlay'>
                 <h1 style={{ fontSize: "4.1vw", fontWeight: "30px", fontFamily: "Poppins" }} data-aos='fade-left'>WE BRING GOOD FINANCIAL TO LIFE.</h1>
                 <div data-aos='fade-right'>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi nemo corporis quod distinctio veniam fugit cumque cum,
+                We bring good financial solutions to life by providing effective debt relief, personalized plans, and a path to financial freedom.
                   <div style={buttonparentStyle}>
-                    <button style={buttonStyle} className='home-hero-button'>Explore</button>
+                    <a href='#anchor'><button style={buttonStyle} className='home-hero-button'>Explore</button></a>
                   </div>
                 </div>
               </div>
@@ -104,7 +104,7 @@ export default function Home() {
           </div>
           <br />
           <br />
-          <h2 className='text-center' data-aos="fade-right" data-aos-once="true">Services Provided</h2>
+          <h2 className='text-center' id='anchor' data-aos="fade-right" data-aos-once="true">Services Provided</h2>
           <br />
           <div style={{display:"flex",justifyContent:"center"}} data-aos="fade-up" data-aos-once="true">
             <br />
@@ -128,14 +128,14 @@ export default function Home() {
                   <div>
                     <h4>Address</h4>
                     <br />
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium commodi</p>
+                    <p>OFFICE NO.4 ,NEAR MORYA MEDICAL,N-6 CIDCO, CHHATRAPATI SAMBHAJI NAGAR (AURANGABAD) 431001</p>
                   </div>
                   <div>
-                    <p>Mobile : 1234556</p>
-                    <p>Mobile : 1234556</p>
+                    <p>Mobile : 9322944343</p>
+                    <p>Mobile : 7058417001</p>
                   </div>
                   <div>
-                    <p>Email : Lambodar@debts</p>
+                    <p>Email : lambodardebtsolution@gmail.com</p>
                   </div>
                 </Col>
                 <Col md={6} className='head-office-loc' data-aos='fade-right'>
