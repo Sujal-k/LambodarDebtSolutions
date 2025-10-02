@@ -5,7 +5,7 @@ import abimg1 from "../../assets/team.jpeg"; // Hero image
 import abimg2 from "../../assets/girl.png";  // Side illustration
 import aboutImage from "../../assets/about.jpg"; // Additional image
 import "../css/about.css";
-
+import { Link } from "react-router-dom";
 export default function About() {
   useEffect(() => {
     AOS.init({ duration: 1000, once: false, mirror: false });
@@ -22,10 +22,16 @@ export default function About() {
             We are committed to delivering reliable financial solutions, built
             on trust, transparency, and decades of expertise in the industry.
           </p>
-          <div className="hero-buttons">
-            <button className="btn-primary">Contact Us</button>
-            <button className="btn-outline">Our Services</button>
-          </div>
+
+<div className="hero-buttons">
+  <Link to="/contact">
+    <button className="btn-primary">Contact Us</button>
+  </Link>
+  <Link to="/services">
+    <button className="btn-outline">Our Services</button>
+  </Link>
+</div>
+
         </div>
       </section>
 

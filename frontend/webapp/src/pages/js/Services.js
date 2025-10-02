@@ -15,17 +15,23 @@ const Services = () => {
 
   // Using your given data + online icons (circle with initials)
   const servicesData = [
-    {
-      icon: "https://placehold.co/80x80/0d6efd/ffffff?text=LA&shape=circle",
-      title: "Legal Advisory",
+   {
+      icon: "https://placehold.co/80x80/0d6efd/ffffff?text=CC",
+      title: "Credit Card Loan Recovery",
       description:
-        "Our legal advisory services offer expert debt recovery and financial management guidance, helping you confidently navigate legal complexities.",
+        "We provide effective credit card loan recovery services, helping you manage outstanding balances and reduce financial stress through structured repayment plans.",
     },
     {
       icon: "https://placehold.co/80x80/0d6efd/ffffff?text=NPA",
       title: "NPA Loan Recovery",
       description:
         "Our specialized NPA loan recovery services focus on resolving non-performing assets, helping you recover dues and improve your financial health.",
+    },
+     {
+      icon: "https://placehold.co/80x80/0d6efd/ffffff?text=HL",
+      title: "Home Loan Recovery",
+      description:
+        "Our home loan recovery and repossession services aim to protect your most valuable asset, offering solutions to manage repayments and secure your home.",
     },
     {
       icon: "https://placehold.co/80x80/0d6efd/ffffff?text=PL",
@@ -40,24 +46,6 @@ const Services = () => {
         "Our experts assist in recovering business loans, offering strategic solutions to help you stabilize your business finances and ensure ongoing operations.",
     },
     {
-      icon: "https://placehold.co/80x80/0d6efd/ffffff?text=CC",
-      title: "Credit Card Loan Recovery",
-      description:
-        "We provide effective credit card loan recovery services, helping you manage outstanding balances and reduce financial stress through structured repayment plans.",
-    },
-    {
-      icon: "https://placehold.co/80x80/0d6efd/ffffff?text=RP",
-      title: "Repossession",
-      description:
-        "We handle repossessions professionally and efficiently, ensuring the process is conducted smoothly while minimizing disruption and maximizing asset recovery.",
-    },
-    {
-      icon: "https://placehold.co/80x80/0d6efd/ffffff?text=HL",
-      title: "Home Loan Recovery",
-      description:
-        "Our home loan recovery and repossession services aim to protect your most valuable asset, offering solutions to manage repayments and secure your home.",
-    },
-    {
       icon: "https://placehold.co/80x80/0d6efd/ffffff?text=4W",
       title: "Four Wheeler Loan Recovery",
       description:
@@ -69,6 +57,15 @@ const Services = () => {
       description:
         "We specialize in recovering two-wheeler loans, ensuring a smooth process to help you regain financial stability and secure your valuable assets.",
     },
+    
+    {
+      icon: "https://placehold.co/80x80/0d6efd/ffffff?text=RP",
+      title: "Repossession",
+      description:
+        "We handle repossessions professionally and efficiently, ensuring the process is conducted smoothly while minimizing disruption and maximizing asset recovery.",
+    },
+   
+    
   ];
 
   return (

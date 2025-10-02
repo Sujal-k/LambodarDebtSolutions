@@ -96,10 +96,10 @@ export default function Home() {
     <h2 className="text-center mb-4" data-aos="fade-up">Our Trusted Financial Partners</h2>
     <Row className="justify-content-center align-items-center">
       {[
+         { name: "Loksuviddha", logo: require("../../assets/loksuvidha.png") },
+         { name: "Bajaj finance limited", logo: require("../../assets/image.png") },
+           { name: "L&T Finance", logo: require("../../assets/L&T.png") },
        { name: "Hero Fincorp", logo: require("../../assets/hero-fincorp-seeklogo.png") },
-  { name: "Loksuviddha", logo: require("../../assets/loksuvidha.png") },
-  { name: "Bajaj finance limited", logo: require("../../assets/image.png") },
-  { name: "L&T Finance", logo: require("../../assets/L&T.png") },
       ].map((bank, index) => (
         <Col key={index} xs={6} sm={4} md={3} className="text-center mb-4" data-aos="fade-up" data-aos-delay={index * 100}>
           <div className="bank-card p-3 shadow-sm rounded" style={{ backgroundColor: '#ffffff', transition: 'transform 0.3s' }}>
