@@ -215,8 +215,9 @@
     grid-template-columns: 1fr;
   }
 }
-.service-card {
-   background: linear-gradient(135deg, #4eb4f4, #f0f2f4);
+
+.service-card{
+  background: linear-gradient(135deg, #4eb4f4, #f0f2f4);
   border-radius: 12px;
   padding: 30px;
   text-align: left;
@@ -225,8 +226,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-card:hover {
+.service-card:hover{
   transform: translateY(-8px);
-  
   box-shadow: 0 10px 20px rgba(13, 45, 98, 0.1);
 }
