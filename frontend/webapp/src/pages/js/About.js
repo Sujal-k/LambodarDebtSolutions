@@ -1,61 +1,82 @@
-import React,{useEffect} from 'react'
-// import { Container } from 'react-bootstrap';
-import abimg1 from '../../assets/team.jpeg';
-import abimg2 from '../../assets/girl.png'
-import Cardcount from '../../components/js/count-card';
-import '../css/about.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import abimg1 from "../../assets/team.jpeg"; // Hero image
+import abimg2 from "../../assets/girl.png";  // Side illustration
+import aboutImage from "../../assets/about.jpg"; // Additional image
+import "../css/about.css";
 
 export default function About() {
   useEffect(() => {
-    AOS.init({
-      duration: 1000, // Global duration for all animations
-      once: false, // Whether animation should happen only once - while scrolling down
-      mirror: false, // Whether elements should animate out while scrolling past them
-    });
+    AOS.init({ duration: 1000, once: false, mirror: false });
   }, []);
+
   return (
-    <>
-    <div className='cont'>
-    <br/>
-    <div className='section-top'>
-      <img src={abimg1} alt='team' data-aos="fade-up" draggable="false"></img>
-      <div className='text-over-img'>
-        <h4 data-aos="fade-right"  data-aos-once="true">What is Carlio And<br></br>How it is valid?</h4>
-        <p data-aos="fade-left"  data-aos-once="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer.</p>
-        <div className='button-holder1'>
-              <a href='#target1'><button id='btn-1' data-aos="fade-left"  data-aos-once="true">Explore</button></a>
-              <a href='#target2'><button id='btn-2' data-aos="fade-right"  data-aos-once="true">Contact Us</button></a>
-            </div>
-      </div>
-    </div>
-    <div className='section-mid' id='target1'>
+    <div className="about-container">
+      {/* Hero Section */}
+      <section className="about-hero">
+        <img src={abimg1} alt="Our Team" className="about-hero-img" />
+        <div className="about-hero-text" data-aos="fade-up">
+          <h1>About Us</h1>
+          <p>
+            We are committed to delivering reliable financial solutions, built
+            on trust, transparency, and decades of expertise in the industry.
+          </p>
+          <div className="hero-buttons">
+            <button className="btn-primary">Contact Us</button>
+            <button className="btn-outline">Our Services</button>
+          </div>
+        </div>
+      </section>
+
+ <div className='section-mid' id='target1'>
         <div className='section-mid-left'>
-          <img src={abimg2} alt='girl' data-aos="fade-left"  data-aos-once="false" draggable="false"></img>
+          <div className="image-box">
+            <img src={aboutImage} alt='team' draggable="false" />
+          </div>
         </div>
         <div className='section-mid-right'>
           <div className='section-mid-right-top'>
-            <h3 data-aos="fade-up" >Our Company Overview</h3>
-            <p data-aos="fade-right"  data-aos-once="true">At Lambodar Debt Solutions, we are dedicated to helping individuals achieve financial stability and freedom. Our mission is to provide effective debt relief through personalized plans tailored to each client's unique situation. With a focus on transparency, integrity, and exceptional customer service, we guide our clients through the complexities of debt management, offering solutions that bring financial peace of mind. </p>
+            <h3 className="blue-heading">Our Company Overview</h3>
+            <ul className="feature-list">
+              <li className="feature-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="currentColor"/></svg>
+                <span>At Lambodar Debt Solutions, we are dedicated to helping individuals achieve financial stability and freedom.</span>
+              </li>
+              <li className="feature-item">
+                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="currentColor"/></svg>
+                <span>Our mission is to provide effective debt relief through personalized plans tailored to each client's unique situation.</span>
+              </li>
+              <li className="feature-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="currentColor"/></svg>
+                <span>We focus on transparency, integrity, and exceptional customer service.</span>
+              </li>
+              <li className="feature-item">
+                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="currentColor"/></svg>
+                <span>We empower clients to take control of their finances and build a brighter financial future.</span>
+              </li>
+            </ul>
+            <button id='btn-5'>Learn More</button>
           </div>
-          <hr/>
-          <div className='section-mid-right-bottom'>
-            <p data-aos="fade-left"  data-aos-once="true">Our experienced team works diligently to negotiate with creditors, reduce interest rates, and create manageable repayment plans. We are committed to empowering our clients to take control of their finances and build a brighter financial future. At Lambodar Debt Solutions, we bring good financial solutions to life.</p>
-            <button id='btn-5' data-aos="fade-in">Learn More</button>
           </div>
-        </div>
-    </div>
-    <div className='section-bottom'>
-      <div className='card-cont'>
-        <Cardcount count='500+' title="Cases" info="good experience about debt recovery"/>
-        <Cardcount count='60+' title="Employees" info="Family of 50-100 people working together" />
-        <Cardcount count='80+' title="Cases/Month" info="we resolve this much of cases per month" />
       </div>
-    </div>
-    </div>
-    <div id='target2'></div>
-    </>
-  )
+
+
+
+  <section className="stats-section">
+        <div className="stat-card">
+          <h3>1200+</h3>
+          <p>Clients Served</p>
+        </div>
+        <div className="stat-card">
+          <h3>100+</h3>
+          <p>Successful Recoveries</p>
+        </div>
+        <div className="stat-card">
+          <h3>10+</h3>
+          <p>Years of Experience</p>
+        </div>
+      </section>
+ </div>
+);
 }

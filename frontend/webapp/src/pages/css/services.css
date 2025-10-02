@@ -1,86 +1,213 @@
-#page-heading{
-    padding: 30px;
-    font-size: 40px;
-    font-family: poppins,sans-serif;
+/* src/css/services.css */
+
+/* General Page Styles */
+.services-page {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9fafb;
+  color: #333;
 }
-.first-section{
-    display: flex;
-    padding: 30px 30px;
-    align-items: center;
-    justify-content: center;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-.first-section-left{
-    width: 50%;
-    font-family: Poppins,sans-serif;
-    display: block;
-    justify-content: center;
-    align-items: center;
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #102a43;
+  margin-bottom: 40px;
 }
-.first-section-left h4{
+
+/* --- NEW & UPDATED HERO SECTION STYLES --- */
+/* src/css/services.css */
+
+/* --- NEW HERO SECTION STYLES (FULL BACKGROUND IMAGE) --- */
+.services-hero {
+  position: relative;
+  /* The URL from your original <img> tag */
+  background-image: url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Dark overlay to make text readable */
+  background-color: rgba(13, 45, 98, 0.7);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Sits on top of the overlay */
+}
+
+.hero-title {
+  font-size: 3.5rem; /* Larger font for impact */
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  max-width: 700px;
+  /* Center the paragraph block itself */
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+  line-height: 1.7;
+}
+/* --- END OF HERO SECTION STYLES --- */
+
+/* --- END OF HERO SECTION STYLES --- */
+
+
+/* Services Grid Section */
+.services-grid-section {
+  padding: 80px 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Target the correct button class: .hero-button */
+.services-hero .hero-button {
+  background: linear-gradient(135deg, #19bfc2, #f0f2f4); /* Your new gradient */
+  color: #0d2d62; /* You might want to change text color for contrast */
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: all 0.3s ease;
+}
+
+.services-hero .hero-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+.card-icon {
+  margin-bottom: 20px;
+}
+
+/* Fix service card icon */
+.service-icon img {
+  width: 80px;        /* or 80px, match your placeholder size */
+  height: 80px;
+  border-radius: 50%; /* makes it perfectly circular */
+  margin-bottom: 20px; /* vertical space between icon and title/text */
+}
+
+
+.service-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0d2d62;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a5568;
+}
+.hero-button {
+  background: linear-gradient(135deg, #216995, #0b0c0c);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 5px; /* space from subtitle */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #0b5ed7; /* slightly darker on hover */
+  transform: translateY(-3px);
+}
+
+
+/* Call to Action Section */
+.cta-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.2rem;
     font-weight: 700;
-    font-size: 60px;
+    color: #102a43;
+    margin-bottom: 15px;
 }
-.first-section-left p{
-    font-size: 18px;
-    font-weight: 400;
+
+.cta-section p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
-#btn{
-    padding: 10px;
-    margin: auto;
-    width: 50%;
-}
-.first-section-left button{
-    background: rgba(255, 119, 43, 1);
+
+.cta-button {
+    /* background-color: #ff6b6b; */
+       background: linear-gradient(135deg, #286891, #a8bdd2);
     color: white;
-    padding: 10px 60px;
-    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 15px 35px;
     border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.first-section-right{
-    padding: 10px;
+
+.cta-button:hover {
+    background-color: #e65a5a;
+    transform: translateY(-3px);
 }
-.first-section-right img{
-    width: 100%;
-    max-width: 576px;
+
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-.second-section-carrier-page h3{
-    font-weight: 700;
-    font-size: 40px;
-}
-@media (max-width : 992px) {
-    .first-section-left h4{
-        font-size: 45px;
-    }
-    .first-section-left p{
-        font-size: 14px;
-    }
-}
-@media (max-width : 768px) {
-    .first-section{
-        display: flex;
-        flex-direction: column;
-    }
-    .first-section-left{
-        width: 100%;
-    }
-    .cards-row{
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-    }
-}
-@media (max-width : 441px) {
-    .first-section-left h4,.second-section-carrier-page h3{
-        font-size: 30px;
-    }
-    .first-section-left p,.info-para-carrier p{
-        font-size: 12px;
-    }
-    #page-heading{
-        font-size: 30px;
-    }
-    .first-section-left button{
-        padding: 7px 40px;
-        justify-self: center;
-    }
+
+@media (max-width: 768px) {
+  /* Make hero section stack on mobile */
+  .hero-content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text, .hero-image {
+    max-width: 100%;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
 }

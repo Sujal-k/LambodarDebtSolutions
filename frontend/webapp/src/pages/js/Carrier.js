@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import '../css/carrier.css';
-import interviewImage from '../../assets/OnlineInterview.png';
-import CareerCard from '../../components/js/CareerCard';
-import AOS from 'aos';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
-import Spinner from 'react-bootstrap/Spinner'; // Import Spinner component
+import { Container, Button, Form, Modal, Spinner } from 'react-bootstrap';
 import axios from 'axios';
-import { Container } from 'react-bootstrap';
+import { Briefcase, TrendingUp, Users } from 'lucide-react'; // Professional icons
+import '../css/carrier.css';
 
-const jobRoles = ['Back Office Operation', 'Telecalling', 'Field Executive'];
-
-const StyledDiv = () => {
+// --- Main Careers Page Component ---
+const CareersPage = () => {
+  // --- STATE MANAGEMENT (from your original code) ---
   const [showForm, setShowForm] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState('');
@@ -23,173 +17,221 @@ const StyledDiv = () => {
     jobRole: '',
     mobile: ''
   });
-  const [loading, setLoading] = useState(false); // Add loading state
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: false,
-      mirror: false,
-    });
-  }, []);
+  // --- JOB DATA (from your original code) ---
+  const jobOpenings = [
+    {
+      title: 'Back Office Executive',
+      location: "Nagpur, Maharashtra",
+      responsibilities: [
+        "Perform advanced Excel functions for comprehensive data analysis and reporting.",
+        "Merge data from various sources to create accurate and detailed reports.",
+        "Generate timely reports to keep management updated on performance metrics.",
+        "Maintain data integrity and ensure efficient data management."
+      ],
+      requirements: [
+        "Advanced proficiency in MS-Excel, including complex formulas and data manipulation.",
+        "Experience with data merging and reporting.",
+        "Strong attention to detail and organizational skills.",
+        "Ability to manage and prioritize multiple tasks effectively."
+      ]
+    },
+    {
+      title: 'Telecaller',
+      location: "Nagpur, Maharashtra",
+      responsibilities: [
+        "Handle customer inquiries and provide accurate information.",
+        "Utilize advanced MS-Excel skills for managing and analyzing data.",
+        "Supervise and lead a team of telecallers to meet and exceed targets.",
+        "Manage and organize customer data to ensure accurate operations."
+      ],
+      requirements: [
+        "Strong communication and interpersonal skills.",
+        "Proficiency in MS-Excel, including advanced functions.",
+        "Proven experience in team management.",
+        "Excellent organizational skills and attention to detail."
+      ]
+    },
+    {
+      title: 'Field Executive',
+      location: "Nagpur, Maharashtra",
+      responsibilities: [
+        "Interact with customers to address their needs and resolve issues.",
+        "Conduct door-to-door visits for service provision and engagement.",
+        "Implement recovery strategies to retrieve overdue payments.",
+        "Handle repossession processes with professionalism."
+      ],
+      requirements: [
+        "Excellent customer service and communication skills.",
+        "Ability to handle door-to-door visits and manage collections.",
+        "Experience in recovery and repossession activities.",
+        "Strong organizational and problem-solving skills."
+      ]
+    }
+  ];
 
-  const handleShow = () => setShowForm(true);
+  // --- HANDLERS (from your original code) ---
+  const handleShow = (role = '') => {
+    const jobRole = role || '';
+    setSelectedJobRole(jobRole);
+    setFormData({ name: '', email: '', jobRole, mobile: '' });
+    setShowForm(true);
+  };
   const handleClose = () => setShowForm(false);
+  const handlePopupClose = () => setShowPopup(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleJobRoleChange = (e) => {
-    setSelectedJobRole(e.target.value);
-    setFormData({ ...formData, jobRole: e.target.value });
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Set loading to true when form is submitted
-
+    setLoading(true);
     try {
-      const response = await axios.post('/career', formData, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
+      const response = await axios.post('http://localhost:5000/career', formData, {
+        headers: { 'Content-Type': 'application/json' },
       });
       console.log('Success:', response.data);
-      setPopupMessage('Application submitted successfully!');
+      setPopupMessage('✅ Application submitted successfully!');
       setShowPopup(true);
       handleClose();
     } catch (error) {
       console.error('Error:', error);
-      setPopupMessage('Failed to submit application. Please try again.');
+      setPopupMessage('❌ Failed to submit application. Please try again.');
       setShowPopup(true);
     }
-    setLoading(false); // Set loading to false once request is complete
+    setLoading(false);
   };
 
-  const handlePopupClose = () => setShowPopup(false);
-  
-    const respo1 = [
-        "Handle customer inquiries and provide accurate information.",
-        "Handle customer inquiries and provide accurate information.",
-        "Utilize advanced MS-Excel skills for managing and analyzing data.",
-        "Supervise and lead a team of telecallers to meet and exceed targets.",
-        "Manage and organize customer data to ensure accurate and efficient operations."
-    ];
-    const reqs1 = [
-        "Strong communication and interpersonal skills.",
-        "Proficiency in MS-Excel, including advanced functions.",
-        "Proven experience in team management.",
-        "Excellent organizational skills and attention to detail."
-    ];
-    const respo2 = [
-        "Interact with customers to address their needs and resolve issues.",
-        "Conduct door-to-door visits for service provision and customer engagement.",
-        "Implement recovery strategies to retrieve overdue payments.",
-        "Collect payments and manage collections effectively.",
-        "Oversee repossession processes, handling assets with professionalism."
-    ];
-    const reqs2 = [
-        "Excellent customer service and communication skills.",
-        "Ability to handle door-to-door visits and manage collections.",
-        "Experience in recovery and repossession activities.",
-        "Strong organizational and problem-solving skills."
-    ];
-    const respo3 = [
-        "Perform advanced Excel functions for comprehensive data analysis and reporting.",
-        "Merge data from various sources to create accurate and detailed reports.",
-        "Generate timely reports to keep management updated on performance metrics.",
-        "Maintain data integrity and ensure efficient data management."
-    ];
-    const reqs3 = [
-        "Advanced proficiency in MS-Excel, including complex formulas and data manipulation.",
-        "Experience with data merging and reporting.",
-        "Strong attention to detail and organizational skills.",
-        "Ability to manage and prioritize multiple tasks effectively."
-    ];
+
   return (
-    <Container>
-      <section>
-        <br/>
-        <div className="styled-div">
-          <h2 data-aos="fade-right" data-aos-once="true">Welcome to Lambodar Debt Solutions!</h2>
-          <h4 data-aos="fade-right" data-aos-once="true">We are hiring!</h4>
-          <Button className='button-apply' variant="outline-light" onClick={handleShow}>
-            Apply now
-          </Button>{' '}
-          <img className='InterviewImage' src={interviewImage} alt="Online Interview" data-aos="fade-left" data-aos-once="true" draggable="false"/>
+    <div className="careers-page-container">
+       
+      
+      {/* Hero Section */}
+      <section className="careers-hero-section">
+        <div className="hero-overlay"></div>
+        <div className="hero-content">
+            <h1>Join Our Team</h1>
+            <p>
+              Be a part of a dynamic team dedicated to providing exceptional
+              financial solutions. We're looking for passionate individuals to help us grow.
+            </p>
+            <a href="#available-jobs" className="hero-button">
+              View Open Positions
+            </a>
         </div>
-
-        <div className='second-section-carrier-page'>
-          <h3 data-aos="fade-right" data-aos-once="true">Available Jobs</h3>
-          <div className='info-para-carrier'>
-            <p data-aos="fade-left" data-aos-once="true">Discover exciting career opportunities with us, where your skills and passion meet unmatched growth and success.</p>
-          </div>
-        </div>
-
-        <div className="cards-container">
-        <CareerCard title="Telecaller" respo={respo1} reqs={reqs1} />
-        <CareerCard title="Field Executive" respo={respo2} reqs={reqs2} />
-        <CareerCard title="Back Office Executive" respo={respo3} reqs={reqs3} />
-        </div>
-
-        <Modal show={showForm} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Application Form</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Form onSubmit={handleSubmit}>
-              <Form.Group controlId="formName">
-                <Form.Label>Name</Form.Label>
-                <Form.Control type="text" name="name" placeholder="Enter your name" value={formData.name} onChange={handleInputChange} />
-              </Form.Group>
-
-              <Form.Group controlId="formEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" name="email" placeholder="Enter your email" value={formData.email} onChange={handleInputChange} />
-              </Form.Group>
-
-              <Form.Group controlId="formJob">
-                <Form.Label>Job Role</Form.Label>
-                <Form.Control as="select" name="jobRole" value={selectedJobRole} onChange={handleJobRoleChange}>
-                  <option value="">Select a job role...</option>
-                  {jobRoles.map((role, index) => (
-                    <option key={index} value={role}>
-                      {role}
-                    </option>
-                  ))}
-                </Form.Control>
-              </Form.Group>
-
-              <Form.Group controlId="formMobile">
-                <Form.Label>Mobile No.</Form.Label>
-                <Form.Control type="tel" name="mobile" placeholder="Enter your mobile number" value={formData.mobile} onChange={handleInputChange} />
-              </Form.Group>
-              
-              <Button variant="primary" type="submit" disabled={loading}>
-                {loading ? <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" /> : 'Submit'}
-              </Button>
-            </Form>
-          </Modal.Body>
-        </Modal>
-
-        <Modal show={showPopup} onHide={handlePopupClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Application Status</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <p>{popupMessage}</p>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handlePopupClose}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </Modal>
       </section>
-    </Container>
+{/* Why Work With Us Section */}
+<section className="why-us-section">
+  <h2 className="section-title">Why Work With Us?</h2>
+  <p className="section-subtitle">
+    We foster a supportive environment where our employees can thrive both personally and professionally.
+  </p>
+  <div className="benefits-grid">
+    <div className="benefit-item">
+      <div className="benefit-icon"><TrendingUp size={40} /></div>
+      {/* ADD THIS WRAPPER DIV */}
+      <div className="benefit-text">
+        <h3>Professional Growth</h3>
+        <p>We provide continuous learning opportunities and clear career paths to help you advance.</p>
+      </div>
+    </div>
+    <div className="benefit-item">
+      <div className="benefit-icon"><Users size={40} /></div>
+      {/* ADD THIS WRAPPER DIV */}
+      <div className="benefit-text">
+        <h3>Collaborative Culture</h3>
+        <p>Work alongside a team of dedicated professionals in a supportive and inclusive atmosphere.</p>
+      </div>
+    </div>
+    <div className="benefit-item">
+      <div className="benefit-icon"><Briefcase size={40} /></div>
+      {/* ADD THIS WRAPPER DIV */}
+      <div className="benefit-text">
+        <h3>Competitive Compensation</h3>
+        <p>We offer attractive salary packages and performance-based incentives.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      {/* Job Listings Section */}
+      <section id="available-jobs" className="job-listings-section">
+        <h2 className="section-title">Available Jobs</h2>
+        <Container>
+          {jobOpenings.map((job, index) => (
+            <div className="job-card" key={index}>
+              <div className="job-header">
+                <div className="job-title">
+                  <h2>{job.title}</h2>
+                  <span>{job.location}</span>
+                </div>
+                <Button variant="primary" className="apply-button" onClick={() => handleShow(job.title)}>Apply Now</Button>
+              </div>
+              <div className="job-details">
+                <div className="responsibilities">
+                  <h4>Responsibilities</h4>
+                  <ul>
+                    {job.responsibilities.map((item, i) => <li key={i}>{item}</li>)}
+                  </ul>
+                </div>
+                <div className="requirements">
+                  <h4>Requirements</h4>
+                  <ul>
+                    {job.requirements.map((item, i) => <li key={i}>{item}</li>)}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Container>
+      </section>
+
+      {/* Form Modal (Your original component) */}
+      <Modal show={showForm} onHide={handleClose} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Application Form for {selectedJobRole}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3">
+              <Form.Label>Name</Form.Label>
+              <Form.Control type="text" name="name" required placeholder="Enter your name" value={formData.name} onChange={handleInputChange} />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="email" name="email" required placeholder="Enter your email" value={formData.email} onChange={handleInputChange} />
+            </Form.Group>
+            <Form.Group className="mb-3">
+                <Form.Label>Applying for</Form.Label>
+                <Form.Control type="text" name="jobRole" value={selectedJobRole} readOnly disabled />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>Mobile</Form.Label>
+              <Form.Control type="tel" name="mobile" required placeholder="Enter your mobile number" value={formData.mobile} onChange={handleInputChange} />
+            </Form.Group>
+            <Button variant="success" type="submit" disabled={loading} className="w-100">
+              {loading ? <Spinner animation="border" size="sm" /> : 'Submit Application'}
+            </Button>
+          </Form>
+        </Modal.Body>
+      </Modal>
+
+      {/* Status Modal (Your original component) */}
+      <Modal show={showPopup} onHide={handlePopupClose} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Application Status</Modal.Title>
+        </Modal.Header>
+        <Modal.Body><p className="text-center">{popupMessage}</p></Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handlePopupClose}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+    </div>
   );
 };
 
-export default StyledDiv;
+export default CareersPage;

@@ -1,26 +1,308 @@
-   .head-office-content-custom{
-    display: flex !important; 
-    justify-content: space-around !important;
+/* --- NEW, STRONGER ALIGNMENT FIX --- */
+/* This forces the entire column to become a flex container */
+.hero-content-column {
+  display: flex;
+  flex-direction: column;
+  /* This is the key property: It aligns EVERY child item */
+  /* (h1, p, divs, etc.) to the start of the column. */
+  align-items: flex-start; 
+    gap: 1.25rem;
+}
+.hero-section {
+  padding: 80px 0;
+}
+.hero-section h1 {
+  font-size: 2.7rem;
+  font-weight: 700;
+}
+.hero-section p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 1.3rem;
+}
+.hero-buttons .btn-primary {
+  background: #eb6f0a;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  margin: 0;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.hero-buttons .btn-outline {
+  border: 1px solid #ddd;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #374151;
+  font-size: 1.3rem;
+}
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;   /* allows buttons to go to a new line on small screens */
+  gap: 10px;         /* spacing between buttons instead of margin-right */
+  margin-top: 7px;  /* optional, space below text */
+  justify-content: flex-start; /* buttons aligned left on large screens */
+}
+
+/* Optional: make buttons full width on very small screens */
+@media (max-width: 576px) {
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-outline {
+    flex: 1 1 100%;   /* makes buttons full width on small screens */
+    margin-right: 0;  /* remove margin-right for stacking */
+    text-align: center;
   }
+}
+/* ReactCardSlider Custom Styling */
+.services-section .slider-card {
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s ease-in-out;
+  padding: 20px;
+  height: 100%;
+  text-align: center;
+}
 
-  .head-office-content{
-    font-family: 'poppins',sans-serif;
-    font-weight: 600;
-  }
+/* Hover effect */
+.services-section .slider-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  background: linear-gradient(135deg, #1998e7, #bfddf0);
+  /* background: linear-gradient(135deg, #ff7e29, #fbc531); */
+  /* background: linear-gradient(135deg, #7f5af0, #ff6ec7); */
+  /* background: linear-gradient(135deg, #00c9a7, #92fe9d); */
 
-  @media (max-width: 768px){
-    .headoffice-custom{
-      font-size: 15px;
-    }
-
-    .home-hero-overlay{
-      font-size: 12px !important;
-    }
-
-    .home-hero-button{
-      padding: 6px 20px !important; 
-    }
-  }
+/* 
+background: linear-gradient(135deg, #00b09b, #96c93d); */
+/* background: linear-gradient(135deg, #1e3c72, #2a5298); */
+/* background: linear-gradient(135deg, #00b09b, #96c93d);  */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  color: #fff;
+}
+
+.services-section {
+  padding: 60px 0;
+  background: #f9fafb;
   
+}
+
+.trust-section {
+  padding: 60px 0;
+  text-align: center;
+  background: #ffffff;
+}
+
+.trust-section h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* ======================================= */
+/* Head Office Section Styling             */
+/* ======================================= */
+
+.headoffice-section {
+  padding: 60px 0;
+  background-color: #f8f9fa; /* Light grey background */
+}
+
+/* --- Left Column: Text Content --- */
+
+.headoffice-section h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0d2c54; /* Professional dark blue */
+  margin-bottom: 1.5rem;
+}
+
+.headoffice-section p {
+  font-size: 1.1rem;
+  color: #555; /* Soft text color */
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* --- Right Column: Map Styling --- */
+
+/* This is important for making the map responsive */
+.headoffice-section iframe {
+  width: 100%; /* Overrides the fixed width to fill the column */
+  height: 400px; /* Adjust height as needed */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ======================================= */
+/* Responsive Design (for Mobile)          */
+/* ======================================= */
+
+@media (max-width: 767px) {
+  /* On mobile, the `md` breakpoint stacks the columns. This adds some space. */
+  .headoffice-section .col-md-6 {
+    text-align: center; /* Center the text on mobile */
+  }
+
+  /* Add some space above the map when it stacks below the text */
+  .headoffice-section .col-md-6:last-child {
+    margin-top: 2rem;
+  }
+}
+
+/* Testimonials */
+.testimonials-section {
+  padding: 60px 0;
+  background: #f9fafb;
+}
+.testimonial-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+  margin-bottom: 20px;
+}
+.testimonial-card p {
+  font-style: italic;
+  color: #374151;
+}
+.testimonial-card h5 {
+  margin-top: 15px;
+  font-weight: 700;
+  color: #0b6cf0;
+}
+
+/* Footer */
+.footer-section {
+  background: #111827;
+  color: #d1d5db;
+  padding: 50px 0 20px;
+}
+.footer-logo h3 {
+  color: #fff;
+  font-weight: 700;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+.head2{
+  color: #f89604;
+}
+.key-benefits {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  gap: 1rem; /* Adds space between items when they wrap */
+  padding: 1rem 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+/* Individual benefit item */
+.benefit-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Styling for the icons */
+.benefit-icon {
+  font-size: 1.2rem;
+  margin-right: 0.1rem;
+  color: #0056b3; /* Your primary brand color */
+}
+
+/* Container for the social proof */
+.social-proof {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+/* Star rating */
+.social-proof .stars {
+  color: #ffc107; /* Gold color for stars */
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Testimonial text */
+.social-proof .testimonial {
+  font-style: italic;
+  color: #555;
+  margin: 0;
+  padding: 0;
+}
+/* --- Trusted Banks Section --- */
+.trusted-banks-section {
+  /* Padding handled by py-5, optional extra spacing */
+}
+
+/* --- Bank Card Styling --- */
+.bank-card {
+  height: 220px; /* Fixed height for all cards */
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+/* Hover effect */
+.bank-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styling */
+.bank-card img {
+  max-width: 100px;
+  max-height: 80px;
+  object-fit: contain; 
+  margin-bottom: 1rem;
+}
+
+/* Bank Name Styling */
+.bank-card p {
+  color: #333;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Optional: Ensure all columns stretch equally (Bootstrap) */
+.trusted-banks-section .row > [class*="col-"] {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}

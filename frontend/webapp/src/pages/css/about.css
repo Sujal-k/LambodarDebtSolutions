@@ -1,133 +1,239 @@
-.cont{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%; 
-    margin: 0 auto;
-    padding: 20px;
+/* Container */
+.about-container {
+  font-family: "Poppins", sans-serif;
+  color: #333;
 }
-.section-top{
-    position: relative;
-    display: inline-block;
+
+/* ==================== HERO SECTION ==================== */
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
-.section-top img{
-    display: block;
-    width: 100%;
-    filter: brightness(0.8) contrast(0.64) ;
+
+.about-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%; /* Shifts image down so heads aren’t cut */
+  filter: brightness(0.75);
 }
-.text-over-img{
-    position: absolute;
-  top: 50%; 
-  left: 30%; 
-  width: 50%;
-  transform: translate(-50%, -50%);
+
+.about-hero-text {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  max-width: 700px;
+  padding: 20px;
 }
-.text-over-img h4{
-    color: white;
-    font-size: 4vw;
-    padding-left: 10px;
-    border-left: 6px solid #FF772B;
-    border-radius: 7px;
+
+.about-hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
-.text-over-img p{
-    color: #e6e1e1;
-    font-size: 1.4vw;
-    font-weight: 300;
+
+.about-hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #f1f1f1;
 }
-.button-holder1{
-    width: 60%;
-    padding: 10px 0 10px 0 ;
-    display: flex;
-    justify-content: space-between;
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
 }
-#btn-1,#btn-2{
-    padding: 1vw 2vw;
-    border-radius: 5px;
-    font-size: 1vw;
+
+.btn-primary {
+  background: #ff772b;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
 }
-#btn-1{
-    background-color: #FF772B;
-    border: none;
-    font-weight: 600;
+
+.btn-primary:hover {
+  background: #e56212;
 }
-#btn-2{
-    background: transparent;
-    border: 1px solid white;
-    color: white;
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
 }
-.section-mid{
-    display: flex;
-    width: 100%;
-    margin: 40px 0;
-    padding: 20px 0;
-    justify-content: center;
-    align-items: center;
+
+.btn-outline:hover {
+  background: #fff;
+  color: #ff772b;
 }
-.section-mid-left{
-    width: 50%;
-    padding: auto;
-}
-.section-mid-left img{
-    width: 35vw;
-}
-.section-mid-right-top h3{
-    color: 1F1F1F;
-    font-size: 3vw;
-    font-weight: 400;
-}
-.section-mid-right-top p,.section-mid-right-bottom p{
-    font-family: poppins;
-    font-size: 1.5vw;
-    word-spacing: 0.2;
-    color: #666C89;
-    padding: 10px 0;
-}
-#btn-5{
-    width: auto;
-    padding: 1vw 14px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.3vw;
-    font-weight: 400;
-}
-hr{
-    color: #666C89;
-    height: 2px;
-    background-color: #666C89;
-    border-radius: 8px;
-}
-#btn-5{
-    background-color: #2C374E;
-    color: white;
-}
-.card-cont{
-    display: flex;
-    justify-content: space-around;
-}
+
+/* ==================== COMPANY OVERVIEW ==================== */
+ .section-mid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 2rem auto;
+          }
+
+          .section-mid-left, .section-mid-right {
+            flex: 1;
+            min-width: 300px;
+            padding-left: 3rem; 
+          }
+          
+          .image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+          }
+
+          .blue-heading {
+            color: #0d2d62;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+          }
+
+          /* Modern list styling */
+          .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+
+          .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: #444;
+            font-size: 1.05rem;
+            line-height: 1.6;
+          }
+
+          .feature-item svg {
+            flex-shrink: 0; /* Prevents icon from shrinking */
+            margin-top: 5px; /* Aligns icon with the first line of text */
+            color: #1998e7;
+          }
+
+          #btn-5 {
+            background-color: #0d2d62;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 2rem;
+          }
+
+          #btn-5:hover {
+            background-color: #1998e7;
+            transform: translateY(-2px);
+          }
+
 @media (max-width: 768px) {
-    .text-over-img{
-        position: absolute;
-      top: 50%; 
-      left: 45%; 
-      width: 80%;
-      transform: translate(-50%, -50%);
-    }
-    .section-mid{
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    .button-holder1{
-        width: 100%;
-    }
-    .text-over-img h4{
-        border-left: 4px solid #FF772B;
-        border-radius: 4px;
-    }
-    .text-over-img p,#btn-1,#btn-2,#btn-5,.section-mid-right-top p,.section-mid-right-bottom p{
-        font-size: 12px;
-    }
-    .section-top img{
-        width: 90vw;
-    }
-} 
+  .section-mid {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+  .about-points {
+    text-align: left;
+  }
+}
+
+
+  /* ---------- Bottom Section ---------- */
+   /* A simple container to center the stats section for demonstration */
+          .app-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: sans-serif;
+            background: #f9f9f9; /* Moved background here for full page effect */
+          }
+
+          /* ---------- Stats Section Styles based on your code ---------- */
+          .stats-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            padding: 60px 20px;
+            width: 100%; /* Ensure it takes up space */
+            flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+          }
+
+          .stat-card {
+            text-align: center;
+            /* Applying the blue gradient background */
+            background: linear-gradient(135deg, #1998e7, #bfddf0);
+            padding: 3rem; /* Increased padding to make the box bigger */
+            border-radius: 0.75rem; /* Slightly larger border radius */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease-in-out;
+            width: 350px;
+          }
+
+          .stat-card:hover {
+            transform: translateY(-5px); /* Added a subtle hover effect */
+          }
+
+          .stat-card h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white; /* Changed text to white for contrast */
+            margin-bottom: 10px;
+          }
+
+          .stat-card p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9); /* Changed text to off-white for contrast */
+            font-weight: 500;
+          }
+
+@media (max-width: 768px) {
+  .stats-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .about-hero-text h1 {
+    font-size: 2.2rem;
+  }
+  .about-hero-text p {
+    font-size: 1rem;    
+  }
+  .overview-left img {
+    width: 100%;
+    max-width:300px;
+}
+}

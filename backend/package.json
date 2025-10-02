@@ -10,11 +10,13 @@
   "author": "Mandar Gurjar",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
     "mongodb": "^6.8.0",
-    "mongoose": "^8.4.4",
-    "nodemailer": "^6.9.14",
+    "mongoose": "^8.18.3",
+    "nodemailer": "^6.10.1",
     "nodemon": "^3.1.4"
   }
 }
