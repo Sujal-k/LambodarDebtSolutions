@@ -1,0 +1,8 @@
+[build]
+  base = "frontend/webapp"        # where package.json lives
+  command = "npm run build"       # how to build
+  publish = "frontend/webapp/build"   # where built files live
+
+[build.environment]
+  CI = "false"
+  NODE_VERSION = "20"
