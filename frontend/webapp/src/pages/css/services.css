@@ -227,5 +227,6 @@
 
 .service-card:hover {
   transform: translateY(-8px);
+  
   box-shadow: 0 10px 20px rgba(13, 45, 98, 0.1);
 }
