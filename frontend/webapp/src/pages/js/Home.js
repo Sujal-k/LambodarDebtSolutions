@@ -6,22 +6,24 @@ import "aos/dist/aos.css";
 import woman from "../../assets/homepagewoman.png";
 import loc from "../../assets/loc.png";
 import ReactCardSlider from "react-card-slider-component";
-import img1 from "../../assets/slide1.png";
-import img2 from "../../assets/slide2.png";
-import img3 from "../../assets/slide3.png";
-import img4 from "../../assets/slide4.png";
-import img5 from "../../assets/slide5.png";
-import img6 from "../../assets/slide6.png";
+import img1 from "../../assets/NpaLoanRecovery.png";
+import img2 from "../../assets/personalloan.jpg";
+import img3 from "../../assets/B2B.png";
+import img4 from "../../assets/CreditCard.jpg";
+import img5 from "../../assets/Repossesion.png";
+import img6 from "../../assets/HomeLoan.png";
 import '../css/home.css';
 import { FaShieldAlt, FaChartLine, FaUsers } from 'react-icons/fa';
 
 const slides = [
-  { image: img1, title: "NPA Loan Recovery" },
-  { image: img2, title: "Personal Loan Recovery" },
-  { image: img3, title: "B2B Loan Recovery" },
+ 
   { image: img4, title: "Credit Card Loan Recovery" },
+   { image: img1, title: "NPA Loan Recovery" },
+  { image: img2, title: "Personal Loan Recovery" },
+    { image: img6, title: "Home Loan Recovery" },
+  { image: img3, title: "B2B Loan Recovery" },
   { image: img5, title: "Repossession Recovery" },
-  { image: img6, title: "Home Loan Recovery" },
+
 ];
 
 export default function Home() {
