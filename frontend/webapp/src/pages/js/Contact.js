@@ -73,7 +73,7 @@ const ContactPage = () => {
                             <div className="info-icon"><Phone size={40} /></div>
                             <h3>Call Us</h3>
                             <p>
-                                <a href="tel:9322944343">9322944343</a> / <a href="tel:7058417001">7058417001</a>
+                                <a href="tel:9322944343">9322944343</a>
                             </p>
                         </div>
                         <div className="info-card">

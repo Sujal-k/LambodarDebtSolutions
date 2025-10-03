@@ -137,7 +137,6 @@ Aurangabad (MH) 431001
 
         </p>
         <p>📞 +91-9322944343</p>
-        <p>📞 +91-7058417001</p>
         <p>✉ lambodardebtsolution@gmail.com</p>
       </Col>
 

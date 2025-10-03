@@ -47,23 +47,41 @@ app.post('/career', async (req, res) => {
         if (!response) {
             return res.status(500).send({ error: 'Cannot save the data' });
         } else {
-            const mailOptions = {
+            // 1️⃣ Email to owner/client
+            const ownerMailOptions = {
                 from: process.env.EMAIL_USER,
-                to: process.env.EMAIL_RECIVER,
+                to: process.env.EMAIL_RECIVER, // your email / client's email
                 subject: 'New Career Application Received',
-                text: `You have a new career application:\n\nName: ${data.name}\nEmail: ${data.email}\nJob Role: ${data.jobRole}\nMobile: ${data.mobile}`
+                text: `You have a new career application:
+Name: ${data.name}
+Email: ${data.email}
+Job Role: ${data.jobRole}
+Mobile: ${data.mobile}`
             };
+            await transporter.sendMail(ownerMailOptions);
 
-            await transporter.sendMail(mailOptions);
-            return res.status(200).send({ message: 'Data saved and email sent' });
+            // 2️⃣ Confirmation email to applicant
+            const userMailOptions = {
+                from: process.env.EMAIL_USER,
+                to: data.email, // applicant email
+                subject: 'We received your application',
+                text: `Hi ${data.name},
+
+Thank you for applying! We will review your application and contact you soon.
+
+Best regards,
+Lambodar Debt Solution`
+            };
+            await transporter.sendMail(userMailOptions);
+
+            return res.status(200).send({ message: 'Data saved and emails sent' });
         }
     } catch (err) {
         console.error('Error saving career data:', err);
         res.status(400).send({ message: 'Internal server issue' });
     }
 });
-
-// Endpoint to handle contact form submissionss
+// Endpoint to handle contact form submissions
 app.post('/contact', async (req, res) => {
     try {
         const { name, mobile, email, message } = req.body;
@@ -75,16 +93,35 @@ app.post('/contact', async (req, res) => {
         const newContact = new Contact({ name, mobile, email, message });
         await newContact.save();
 
-        const mailOptions = {
+        // 1️⃣ Email to owner/client with user details
+        const ownerMailOptions = {
             from: process.env.EMAIL_USER,
-            to: process.env.EMAIL_RECIVER,
+            to: process.env.EMAIL_RECIVER, // your email / client's email
             subject: 'New Contact Form Submission',
-            text: `Name: ${name}\nPhone: ${mobile}\nEmail: ${email}\nMessage: ${message}`
+            text: `You have a new contact form submission:
+Name: ${name}
+Phone: ${mobile}
+Email: ${email}
+Message: ${message}`
         };
+        await transporter.sendMail(ownerMailOptions);
 
-        await transporter.sendMail(mailOptions);
+        // 2️⃣ Confirmation email to user
+        const userMailOptions = {
+            from: process.env.EMAIL_USER,
+            to: email, // the user's email
+            subject: 'We received your message',
+            text: `Hi ${name},
 
-        res.status(200).json({ message: 'Contact details saved and email sent' });
+Thank you for contacting us! We have received your message and will get back to you shortly.
+
+Best regards,
+Lambodar Debt Solution`
+        };
+        await transporter.sendMail(userMailOptions);
+
+        res.status(200).json({ message: 'Contact details saved and emails sent' });
+
     } catch (err) {
         console.error('Error handling contact form submission:', err);
         res.status(500).json({ message: 'Internal server error' });

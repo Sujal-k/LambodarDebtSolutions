@@ -15,7 +15,7 @@ export default function Footer() {
             <h4>Contact Us</h4>
             <br/>
             <div>
-              <img src={call} alt=' ' draggable="false" /><div> 9322944343 / 7058417001</div>
+              <img src={call} alt=' ' draggable="false" /><div> 9322944343 </div>
             </div>
             <br/>
             <div>
