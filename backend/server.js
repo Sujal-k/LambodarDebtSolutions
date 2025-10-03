@@ -65,7 +65,6 @@ Mobile: ${data.mobile}`,
 <p>Best regards,<br>Lambodar Debt Solution</p>`
     });
 
-console.log("Confirmation email sent:", confirmation);
     return res.status(200).send({ message: "Data saved and emails sent" });
   } catch (err) {
     console.error("Error saving career data:", err);
