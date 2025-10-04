@@ -17,8 +17,7 @@ app.use(bodyParser.json());
 app.use(
   cors({
     origin: [
-    
-      "https://lambodardebtsolution.netlify.app/",
+    "https://lambodardebtsolution.netlify.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
