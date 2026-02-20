@@ -29,7 +29,7 @@ const ContactPage = () => {
         setPopupMessage('');
         try {
             // Using your original endpoint and logic
-            const response = await axios.post('https://lambodardebtsolutionsbackend.onrender.com/contact', formData);
+            const response = await axios.post('http://localhost:5000/contact', formData);
             if (response.status === 200) {
                 setPopupMessage('✅ Contact details saved and email sent successfully!');
                 setFormData({ name: '', email: '', mobile: '', message: '' }); // Clear form
@@ -67,20 +67,20 @@ const ContactPage = () => {
                         <div className="info-card">
                             <div className="info-icon"><MapPin size={40} /></div>
                             <h3>Our Location</h3>
-                            <p>OFFICE NO.4, NEAR MORYA MEDICAL, N-6 CIDCO, CHHATRAPATI SAMBHAJI NAGAR (AURANGABAD) 431001</p>
+                            <p>Office No. F-20,Khinvasara August Highstreet Market Ulkanagari,Chhatrapati Sambhajinagar (MH) 431001</p>
                         </div>
                         <div className="info-card">
                             <div className="info-icon"><Phone size={40} /></div>
                             <h3>Call Us</h3>
                             <p>
-                                <a href="tel:9322944343">9322944343</a>
+                                <a href="tel:9322944343">9322944343</a> 
                             </p>
                         </div>
                         <div className="info-card">
                             <div className="info-icon"><Mail size={40} /></div>
                             <h3>Email Us</h3>
                             <p>
-                                <a href="mailto:lambodardebtsolution@gmail.com">lambodardebtsolution@gmail.com</a>
+                                <a href="mailto:contact.shreyaloans@gmail.com">contact.shreyaloans@gmail.com</a>
                             </p>
                         </div>
                     </div>
@@ -150,4 +150,3 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
-

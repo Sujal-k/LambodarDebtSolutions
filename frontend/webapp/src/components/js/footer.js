@@ -19,7 +19,7 @@ export default function Footer() {
             </div>
             <br/>
             <div>
-              <img src={gmail} alt=' '  draggable="false"/><div> Ganesh.lambodardebtsolution@gmail.com</div>
+              <img src={gmail} alt=' '  draggable="false"/><div> contact.shreyaloans@gmail.com</div>
             </div>
             <br />
           </div>
@@ -39,18 +39,18 @@ export default function Footer() {
             <h4>Our Locations</h4>
             <br/>
             <div>
-              <img src={loc} alt='' draggable="false"/><div><a href='w.com' > OFFICE NO.4 ,NEAR MORYA MEDICAL,N-6 CIDCO, CHHATRAPATI SAMBHAJI NAGAR (AURANGABAD) 431001 </a></div>
+              <img src={loc} alt='' draggable="false"/><div><a href='w.com' > Office No. F-20,Khinvasara August Highstreet Market Ulkanagari,Chhatrapati Sambhajinagar (MH) 431001 </a></div>
             </div>
             <br/>
             <div>
-              <img src={loc} alt='' draggable="false"/><div><a href='w.com' draggable="false"> BLOCK NO.14/125 , SUKHSHANTI NAGAR ,JALNA 431203</a></div>
+              <img src={loc} alt='' draggable="false"/><div><a href='w.com' draggable="false"> BLOCK NO.14/125 , SUKHSHANTI NAGAR ,JALNA 431203</a></div>
             </div>
           </div>
         </div>
         <br />
         <br />
         <div className='footer-copyright'>
-          <p style={{ margin: "0px" }}>@2024 Lambodar Debt Solution. All Right reserved </p>
+          <p style={{ margin: "0px" }}>@2026 Shreya loans and finance. All Right reserved </p>
         </div>
       </div>
     </>

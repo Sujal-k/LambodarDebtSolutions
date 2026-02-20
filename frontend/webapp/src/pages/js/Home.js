@@ -1,29 +1,27 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import woman from "../../assets/homepagewoman.png";
-import loc from "../../assets/loc.png";
 import ReactCardSlider from "react-card-slider-component";
-import img1 from "../../assets/NpaLoanRecovery.png";
-import img2 from "../../assets/personalloan.jpg";
-import img3 from "../../assets/B2B.png";
-import img4 from "../../assets/CreditCard.jpg";
-import img5 from "../../assets/Repossesion.png";
-import img6 from "../../assets/HomeLoan.png";
+import img1 from "../../assets/slide1.png";
+import img2 from "../../assets/slide2.png";
+import img3 from "../../assets/slide3.png";
+import img4 from "../../assets/slide4.png";
+import img5 from "../../assets/slide5.png";
+import img6 from "../../assets/slide6.png";
 import '../css/home.css';
+import img7 from "../../assets/logomain.png";
 import { FaShieldAlt, FaChartLine, FaUsers } from 'react-icons/fa';
 
 const slides = [
- 
-  { image: img4, title: "Credit Card Loan Recovery" },
-   { image: img1, title: "NPA Loan Recovery" },
+  { image: img1, title: "NPA Loan Recovery" },
   { image: img2, title: "Personal Loan Recovery" },
-    { image: img6, title: "Home Loan Recovery" },
   { image: img3, title: "B2B Loan Recovery" },
+  { image: img4, title: "Credit Card Loan Recovery" },
   { image: img5, title: "Repossession Recovery" },
-
+  { image: img6, title: "Home Loan Recovery" },
 ];
 
 export default function Home() {
@@ -98,10 +96,10 @@ export default function Home() {
     <h2 className="text-center mb-4" data-aos="fade-up">Our Trusted Financial Partners</h2>
     <Row className="justify-content-center align-items-center">
       {[
-         { name: "Loksuviddha", logo: require("../../assets/loksuvidha.png") },
-         { name: "Bajaj finance limited", logo: require("../../assets/image.png") },
-           { name: "L&T Finance", logo: require("../../assets/L&T.png") },
        { name: "Hero Fincorp", logo: require("../../assets/hero-fincorp-seeklogo.png") },
+  { name: "Loksuviddha", logo: require("../../assets/loksuvidha.png") },
+  { name: "Bajaj finance limited", logo: require("../../assets/image.png") },
+  { name: "L&T Finance", logo: require("../../assets/L&T.png") },
       ].map((bank, index) => (
         <Col key={index} xs={6} sm={4} md={3} className="text-center mb-4" data-aos="fade-up" data-aos-delay={index * 100}>
           <div className="bank-card p-3 shadow-sm rounded" style={{ backgroundColor: '#ffffff', transition: 'transform 0.3s' }}>
@@ -130,14 +128,13 @@ export default function Home() {
         <h3 className="address-heading mb-3">Address</h3>
 
         <p>
-          Office No. F-20, 1st Floor,KHINVASARA
-August Highstreet Market,Ulkanagari,
-Garkheda Parisar,Chhatrapati Sambhajinagar,
-Aurangabad (MH) 431001
+          Office No. F-20 , Khinvasara August
+Highstreet Market Ulkanagari ,
+Chhatrapati Sambhajinagar (MH) 431001
 
         </p>
         <p>📞 +91-9322944343</p>
-        <p>✉ lambodardebtsolution@gmail.com</p>
+        <p>✉ contact.shreyaloans@gmail.com</p>
       </Col>
 
       {/* --- Right Column (Map) --- */}
@@ -165,7 +162,7 @@ Aurangabad (MH) 431001
             <Col md={4} data-aos="fade-right">
               <div className="testimonial-card">
                 <p>
-                  “Lambodar Debt helped me resolve my business loan quickly.
+                  “Shreya Loans and Finance helped me resolve my business loan quickly.
                   Their team handled negotiations with professionalism.”
                 </p>
                 <h5>- Rajesh P.</h5>

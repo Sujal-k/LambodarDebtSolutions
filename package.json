@@ -1,0 +1,21 @@
+{
+  "name": "lambodardebtsolutions",
+  "version": "1.0.0",
+  "description": "This is a **React-based** advertisement website developed by me and two of my team members for **Lambodar Debt**, a debt recovery company based in **Aurangabad**. The website was designed to showcase the company's services beyond debt recovery and included backend functionality to handle job applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sujal-k/LambodarDebtSolutions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Sujal-k/LambodarDebtSolutions/issues"
+  },
+  "homepage": "https://github.com/Sujal-k/LambodarDebtSolutions#readme"
+}
