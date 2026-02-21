@@ -207,7 +207,7 @@ const CareersPage = () => {
             </Form.Group>
             <Form.Group className="mb-3">
                 <Form.Label>Applying for</Form.Label>
-                <Form.Control type="text" name="jobRole" value={selectedJobRole} readOnly disabled />
+                <Form.Control type="text" name="jobRole"value={formData.jobRole} readOnly />
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Mobile</Form.Label>
