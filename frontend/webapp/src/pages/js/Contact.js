@@ -29,7 +29,7 @@ const ContactPage = () => {
         setPopupMessage('');
         try {
             // Using your original endpoint and logic
-            const response = await axios.post('http://localhost:5000/contact', formData);
+            const response = await axios.post('https://api.shreyaloansandfinance.com/contact', formData);
             if (response.status === 200) {
                 setPopupMessage('✅ Contact details saved and email sent successfully!');
                 setFormData({ name: '', email: '', mobile: '', message: '' }); // Clear form

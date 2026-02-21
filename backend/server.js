@@ -12,18 +12,19 @@ const Contact = require("./models/Contact");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
-app.use(bodyParser.json());
 app.use(
   cors({
     origin: [
-    "https://lambodardebtsolution.netlify.app",
+      "https://shreyaloansandfinance.com",
+      "https://www.shreyaloansandfinance.com",
+      "https://lambodardebtsolution.netlify.app", // optional (keep for safety)
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
+
 app.options("*", cors());
 
 // ✅ Setup Resend
