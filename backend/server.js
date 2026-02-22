@@ -76,7 +76,7 @@ Mobile: ${data.mobile}`,
       subject: "We received your application",
       html: `<p>Hi ${data.name},</p>
 <p>Thank you for applying! We will review your application and contact you soon.</p>
-<p>Best regards,<br>Lambodar Debt Solution</p>`,
+<p>Best regards,<br>Shreya Loans and Finance</p>`,
     });
 
     return res.status(200).send({
