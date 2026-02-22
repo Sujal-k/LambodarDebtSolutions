@@ -102,6 +102,7 @@ app.post("/contact", async (req, res) => {
       });
     }
 
+    // ✅ Save to DB
     const newContact = new Contact({
       name,
       mobile,
@@ -111,23 +112,28 @@ app.post("/contact", async (req, res) => {
 
     await newContact.save();
 
-    // Email to owner
-  await resend.emails.send({
-  from: `Shreya Loans <${process.env.EMAIL_USER}>`,
-  to: process.env.EMAIL_RECIVER,
-  subject: "New Contact Form Submission",
-  text: `You have a new contact form submission:
+    /* ===============================
+       1️⃣ EMAIL TO OWNER
+    =============================== */
+    const ownerMail = await resend.emails.send({
+      from: `Shreya Loans <${process.env.EMAIL_USER}>`,
+      to: process.env.EMAIL_RECIVER,
+      subject: "New Contact Form Submission",
+      text: `You have a new contact form submission:
+
 Name: ${name}
 Phone: ${mobile}
 Email: ${email}
 Message: ${message}`,
-});
+    });
 
-console.log("OWNER MAIL RESPONSE:", ownerMail);
+    console.log("OWNER MAIL RESPONSE:", ownerMail);
 
-    // Confirmation email to user
-    await resend.emails.send({
-      from: process.env.EMAIL_USER,
+    /* ===============================
+       2️⃣ CONFIRMATION TO USER
+    =============================== */
+    const userMail = await resend.emails.send({
+      from: `Shreya Loans <${process.env.EMAIL_USER}>`,
       to: email,
       subject: "We received your message",
       text: `Hi ${name},
@@ -138,14 +144,18 @@ Best regards,
 Shreya Loans and Finance`,
     });
 
+    console.log("USER MAIL RESPONSE:", userMail);
+
     res.status(200).json({
       message: "Contact details saved and emails sent",
     });
+
   } catch (err) {
     console.error("Error handling contact form:", err);
     res.status(500).json({ message: "Internal server error" });
   }
 });
+
 
 /* =====================================================
    ✅ START SERVER
