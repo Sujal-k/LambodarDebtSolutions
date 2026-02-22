@@ -79,6 +79,7 @@ Mobile: ${data.mobile}`,
 <p>Best regards,<br>Shreya Loans and Finance</p>`,
     });
 
+
     return res.status(200).send({
       message: "Data saved and emails sent",
     });
@@ -111,17 +112,18 @@ app.post("/contact", async (req, res) => {
     await newContact.save();
 
     // Email to owner
-    await resend.emails.send({
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_RECIVER,
-      subject: "New Contact Form Submission",
-      text: `You have a new contact form submission:
-
+  await resend.emails.send({
+  from: `Shreya Loans <${process.env.EMAIL_USER}>`,
+  to: process.env.EMAIL_RECIVER,
+  subject: "New Contact Form Submission",
+  text: `You have a new contact form submission:
 Name: ${name}
 Phone: ${mobile}
 Email: ${email}
 Message: ${message}`,
-    });
+});
+
+console.log("OWNER MAIL RESPONSE:", ownerMail);
 
     // Confirmation email to user
     await resend.emails.send({
@@ -133,7 +135,7 @@ Message: ${message}`,
 Thank you for contacting us! We have received your message and will get back to you shortly.
 
 Best regards,
-Lambodar Debt Solution`,
+Shreya Loans and Finance`,
     });
 
     res.status(200).json({
