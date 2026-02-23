@@ -3,6 +3,8 @@ import { Container, Form, Button, Spinner, Modal } from 'react-bootstrap';
 import { Phone, Mail, MapPin } from 'lucide-react'; // Professional icons
 import axios from 'axios';
 import '../css/contact.css'; // Import the CSS file for styling
+import { Helmet } from "react-helmet-async";
+
 
 // --- Main Contact Page Component ---
 const ContactPage = () => {
@@ -47,6 +49,11 @@ const ContactPage = () => {
     const handlePopupClose = () => setShowPopup(false);
 
     return (
+        <>
+        <Helmet>
+  <title>Contact Us | Shreya Loans and Finance</title>
+</Helmet>
+       
         <div className="contact-page-container">
             {/* --- EMBEDDED STYLES FOR THE NEW DESIGN --- */}
          
@@ -146,6 +153,7 @@ const ContactPage = () => {
                 </Modal.Footer>
             </Modal>
         </div>
+         </>
     );
 };
 

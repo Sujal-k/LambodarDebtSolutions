@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../css/services.css"; // your CSS file
+import { Helmet } from "react-helmet-async";
 
 const Services = () => {
   useEffect(() => {
@@ -72,6 +73,29 @@ const Services = () => {
   ];
 
   return (
+    <>
+  <Helmet>
+    <title>
+      Loan & Debt Recovery Services | Shreya Loans and Finance
+    </title>
+
+    <meta
+      name="description"
+      content="Expert loan settlement, debt recovery, NPA loan solutions, personal and business loan assistance in Nagpur. Trusted financial solutions by Shreya Loans and Finance."
+    />
+
+    <meta
+      name="keywords"
+      content="loan settlement Nagpur, debt recovery services, NPA loan recovery, personal loan settlement, business loan solutions Nagpur"
+    />
+
+    <link
+      rel="canonical"
+      href="https://shreyaloansandfinance.com/services"
+    />
+  </Helmet>
+
+  {/* Your existing Services page JSX below */}
     <div className="services-page">
       {/* Hero Section */}
 
@@ -130,6 +154,7 @@ const Services = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

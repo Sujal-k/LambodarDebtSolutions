@@ -3,6 +3,8 @@ import { Container, Button, Form, Modal, Spinner } from 'react-bootstrap';
 import axios from 'axios';
 import { Briefcase, TrendingUp, Users } from 'lucide-react'; // Professional icons
 import '../css/carrier.css';
+import { Helmet } from "react-helmet-async";
+
 
 // --- Main Careers Page Component ---
 const CareersPage = () => {
@@ -107,6 +109,15 @@ const CareersPage = () => {
 
 
   return (
+    <>
+    <Helmet>
+  <title>Careers | Shreya Loans and Finance</title>
+  <meta
+    name="description"
+    content="Join our team at Shreya Loans and Finance. Explore job opportunities."
+  />
+</Helmet>
+   
     <div className="careers-page-container">
        
       
@@ -231,6 +242,7 @@ const CareersPage = () => {
         </Modal.Footer>
       </Modal>
     </div>
+     </>
   );
 };
 

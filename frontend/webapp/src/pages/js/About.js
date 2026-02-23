@@ -5,6 +5,8 @@ import abimg1 from "../../assets/team.jpeg"; // Hero image
 import abimg2 from "../../assets/girl.png";  // Side illustration
 import aboutImage from "../../assets/about.jpg"; // Additional image
 import "../css/about.css";
+import { Helmet } from "react-helmet-async";
+
 
 export default function About() {
   useEffect(() => {
@@ -12,6 +14,14 @@ export default function About() {
   }, []);
 
   return (
+    <>
+    <Helmet>
+  <title>About Us | Shreya Loans and Finance</title>
+  <meta
+    name="description"
+    content="Learn about Shreya Loans and Finance and our trusted financial services."
+  />
+</Helmet>
     <div className="about-container">
       {/* Hero Section */}
       <section className="about-hero">
@@ -78,5 +88,6 @@ export default function About() {
         </div>
       </section>
  </div>
+ </>
 );
 }

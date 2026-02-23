@@ -14,6 +14,7 @@ import img6 from "../../assets/slide6.png";
 import '../css/home.css';
 import img7 from "../../assets/logomain.png";
 import { FaShieldAlt, FaChartLine, FaUsers } from 'react-icons/fa';
+import { Helmet } from "react-helmet-async";
 
 const slides = [
   { image: img1, title: "NPA Loan Recovery" },
@@ -30,6 +31,15 @@ export default function Home() {
   }, []);
 
   return (
+    <>
+    <Helmet>
+  <title>Shreya Loans and Finance | Loan & Debt Solutions in Nagpur</title>
+  <meta
+    name="description"
+    content="Professional loan assistance and debt solutions in Nagpur."
+  />
+</Helmet>
+
     <div className="home-main">
       {/* Hero Section */}
       <section className="hero-section">
@@ -223,6 +233,7 @@ Chhatrapati Sambhajinagar (MH) 431001
       </footer> */}
 
     </div>
+    </>
     
   );
 }

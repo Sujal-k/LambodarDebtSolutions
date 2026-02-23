@@ -1,7 +1,7 @@
                               
                                || श्री ||
 
-Project name : Lambodar Debt's solution, CSN
+Project name : Shreya Loans And Finance, CSN
 
 ## What?
 we are suppose to make advertisement website, having(home,about us,services,carrer,contact us);
