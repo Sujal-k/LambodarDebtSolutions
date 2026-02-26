@@ -39,7 +39,6 @@ export default function Home() {
     content="Professional loan assistance and debt solutions in Nagpur."
   />
 </Helmet>
-
     <div className="home-main">
       {/* Hero Section */}
       <section className="hero-section">
@@ -67,8 +66,6 @@ export default function Home() {
                 <span>Expert Financial Advisors</span>
               </div>
             </div>
-
-         
               <div className="hero-buttons">
                 <Link to="/contact" className="btn-primary">
                   Free Consultation
@@ -121,7 +118,6 @@ export default function Home() {
     </Row>
   </Container>
 </section>
-
 
      {/* Head Office Section */}
 <section className="headoffice-section py-5">
